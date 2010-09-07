@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+td {
+	font-size:13px;
+	font-family: Arial;
+}
+
+body {
+	font-size:13px;
+	font-family:Arial;
+	color: #000000;
+}
+
+h1 {
+	font-size:16px;
+	color: #000000;
+}

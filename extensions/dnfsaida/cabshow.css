@@ -1,0 +1,120 @@
+/* CSS Document */
+
+#doc_space {
+height:60px;
+}
+
+#docH {
+position:relative;
+font-size: 16px;
+color: #FFFFFF;
+font-family: Arial;
+height:96px;
+padding:0px;
+}
+
+#d_nf_saida_title_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:0px;
+left:10px;
+}
+#d_nf_saida_title{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:0px;
+left:110px;
+}
+#d_nf_saida_label{
+position:absolute;
+height:14px;
+width:200px;
+padding:0px;
+top:0px;
+left:300px;
+}
+#d_nf_saida{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:100px;
+padding:0px;
+top:0px;
+left:430px;
+}
+#d_nf_saidaFull_forn_cnpj_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:60px;
+left:10px;
+}
+#d_nf_saidaFull_forn_cnpj{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:60px;
+left:55px;
+}
+
+#d_nf_saidaFull_forn_ie_label{
+position:absolute;
+height:14px;
+width:200px;
+padding:0px;
+top:60px;
+left:230px;
+}
+#d_nf_saidaFull_forn_ie{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:60px;
+left:370px;
+}
+
+#d_nf_saidaFull_forn_estado_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:60px;
+left:530px;
+}
+#d_nf_saidaFull_forn_estado{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:100px;
+padding:0px;
+top:60px;
+left:590px;
+}
+
+#d_nf_saidaFull_forn_razao_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:80px;
+left:10px;
+}
+#d_nf_saidaFull_forn_razao{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:840px;
+padding:0px;
+top:80px;
+left:110px;
+}

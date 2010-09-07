@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+td {
+	font-size:13px;
+	font-family: Arial;
+	border:1px ;
+	border-style:solid;
+	border-spacing:0px;
+	border-color:#BBBBBB;
+}
+
+tr {
+	border: 1px #CCCCCC solid;
+}
+
+input {
+	font-size:12px;
+	font-family: Arial;
+}
+
+body {
+	font-size:13px;
+	font-family:Arial;
+	color: #000000;
+	margin:0px;
+}
+
+h1 {
+	font-size:16px;
+	color: #000000;
+}
+
+#razao {
+    width:450px;
+}
+
+table.tb_form {
+	border:1px ;
+	border-spacing: 0px;
+	border-style:solid;
+}
+

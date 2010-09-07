@@ -1,0 +1,23 @@
+/* CSS Document */
+
+#doc_show_paginas_label{
+	position:absolute;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-family: Arial;
+	top:25px;
+	left:840px;
+}
+
+#doc_show_paginas_div{
+	position:absolute;
+	top:25px;
+	left:910px;
+	padding:0px;
+}
+#doc_show_paginas_select{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:10;
+}

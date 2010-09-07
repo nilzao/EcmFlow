@@ -1,0 +1,29 @@
+<html>
+<head><title></title>
+<link rel="stylesheet" href="view/css/lista.css" type="text/css">
+</head>
+<body bgcolor="FFFFFF">
+<?php
+$listadeptos = $knl_helper->getVar("deptos");
+$usuario = $knl_helper->getVar("usuario");
+?>
+  <h1>Departamentos do Usuario</h1>
+<?php
+//print_r($listausuarios);
+echo $usuario->get_Login()."<br><br>";
+echo "<form method=\"post\" action=\"index.php?domain=Users&action=savedepto\">
+<input type=\"hidden\" name=\"id_usu\" value=\"".$usuario->get_Id()."\">
+<table border=\"1\">";
+foreach($listadeptos as $v){
+    echo "<tr><td>".
+    $v->get_Descricao().
+    "</td><td><input type=\"checkbox\" name=\"deptos[]\" value=\"".
+    $v->get_Id().
+    "\"></td></tr>\n";
+}
+echo "<tr><td colspan=\"2\"><input type=\"submit\" value=\"Salvar\"></td></tr>";
+echo "</table></form>";
+?>
+
+</body>
+</html>

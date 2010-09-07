@@ -1,0 +1,124 @@
+/* CSS Document */
+
+#doc_space {
+height:60px;
+}
+
+#docH {
+position:relative;
+font-size: 16px;
+color: #FFFFFF;
+font-family: Arial;
+height:96px;
+padding:0px;
+}
+
+
+#d_extrato_title_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:10px;
+left:10px;
+}
+#d_extrato_title{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:10px;
+left:110px;
+}
+
+#d_extrato_banco_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:40px;
+left:10px;
+}
+#d_extrato_banco{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:40px;
+left:110px;
+}
+
+#d_extrato_agencia_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:60px;
+left:10px;
+}
+#d_extrato_agencia{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:60px;
+left:110px;
+}
+
+#d_extrato_conta_label{
+position:absolute;
+height:14px;
+width:100px;
+padding:0px;
+top:80px;
+left:10px;
+}
+#d_extrato_conta{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:200px;
+padding:0px;
+top:80px;
+left:110px;
+}
+
+#d_extrato_data_ini_label{
+position:absolute;
+height:14px;
+width:200px;
+padding:0px;
+top:40px;
+left:300px;
+}
+#d_extrato_data_ini{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:100px;
+padding:0px;
+top:40px;
+left:430px;
+}
+
+#d_extrato_data_fim_label{
+position:absolute;
+height:14px;
+width:200px;
+padding:0px;
+top:60px;
+left:300px;
+}
+
+#d_extrato_data_fim{
+position:absolute;
+font-weight: bold;
+height:14px;
+width:100px;
+padding:0px;
+top:60px;
+left:430px;
+}

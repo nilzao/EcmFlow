@@ -1,0 +1,339 @@
+/* CSS Document */
+
+.texto {  font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF;}
+.texto1 { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #FFFFFF;}
+
+table, td 
+{ 
+color: #000; 
+font: normal 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+table.gridtable
+{ 
+border:1px ;
+border-spacing: 0px;
+border-style:solid;
+}
+
+td.gridtd
+{
+border:1px ;
+border-style:solid;
+border-spacing:0px;
+border-color:#BBBBBB;
+}
+
+.readonly {
+BORDER-TOP:#000 0px solid;
+BORDER-BOTTOM:#000 1px solid;
+BORDER-LEFT:#000 1px solid;
+BORDER-RIGHT:#000 1px solid;
+font-family:Verdana,Arial,Helvetica,sans-serif; 
+font-size:11px;
+BACKGROUND-COLOR:#FFF;
+COLOR:#000;
+}
+
+.salvar
+{
+background-image:url(./icones/salvar.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+.email
+{
+background-image:url(./icones/email.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+.excluir
+{
+background-image:url(./icones/excluir2.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+.voltar
+{
+background-image:url(./icones/voltar.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+
+.desfazer
+{
+background-image:url(./icones/desfazer.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+.buscar
+{
+background-image:url(./icones/buscar.png);
+background-position:left; 
+background-repeat:no-repeat;
+background-color:#FFFFFF;
+height:30px;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+}
+
+td.aba
+{color: #000; font: bold 11px Verdana,Arial,Helvetica,sans-serif;}
+td.aba:hover
+{color: #000; font: bold 11px Verdana,Arial,Helvetica,sans-serif;cursor:pointer;}
+
+td.formtop1
+{color: #FFF; font: bold 11px Verdana,Arial,Helvetica,sans-serif;}
+td.formtop2
+{color: #000; font: bold 11px Verdana,Arial,Helvetica,sans-serif;}
+
+iframe {
+	min-height:100%;
+	height:100%;
+	width:100%;
+	border:2px none;
+	border-width:thin;
+	}
+
+div.aba
+{
+width:530px;
+max-width: 528px;
+border-style:solid;
+border: 1px outset;
+position:absolute;
+}
+div.aba2
+{
+width:400px;
+border-style:solid;
+border: 1px outset;
+position:relative;
+}
+div.aba3
+{
+width:400px;
+max-width: 400px;
+border-style:solid;
+border: 1px outset;
+}
+
+td.aba
+{color: #000; font: bold 11px Verdana,Arial,Helvetica,sans-serif;}
+td.aba:hover
+{color: #FF0000; font: bolder 11px Verdana,Arial,Helvetica,sans-serif;cursor:pointer;}
+
+
+body.framebox 
+{
+BACKGROUND-COLOR:#FFFFFF;
+
+}
+
+form, input, select { color: #000; font: normal 11px Verdana,Arial,Helvetica,sans-serif;}
+
+td.labelpagina {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#ADADFF;
+COLOR:#000000;
+border: 2px #CCCCCC outset;
+}
+
+.campo_ghost {
+BORDER-TOP:#000 0px solid;
+BORDER-BOTTOM:#000 0px solid;
+BORDER-LEFT:#000 0px solid;
+BORDER-RIGHT:#000 0px solid;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:11px;
+text-align:right;
+BACKGROUND-COLOR:#EEEEEE;
+COLOR:#000;
+}
+
+td.labelpagina:hover {
+CURSOR:pointer;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#00006E;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC outset;
+}
+
+td.labelpagina:active {
+CURSOR:pointer;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#00006E;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC inset;
+}
+
+
+td.menu {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#ADADFF;
+COLOR:#000000;
+border: 2px #CCCCCC outset;
+}
+
+td.menu:hover {
+CURSOR:pointer;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#00006E;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC outset;
+}
+
+td.menu:active {
+CURSOR:pointer;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#00006E;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC inset;
+}
+
+td.gridh {
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+ BACKGROUND-COLOR:#FF6600;
+COLOR:#FFFFFF;
+border: 2px #CC0000 outset;
+}
+
+td.gridcomm {
+border: 2px #333333;
+}
+
+td.gridh:hover {
+CURSOR:pointer;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+BACKGROUND-COLOR:#FF9900;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC outset;
+}
+
+td.gridh:active {
+CURSOR:pointer;
+font: bold 11px Verdana,Arial,Helvetica,sans-serif;
+BACKGROUND-COLOR:#FFFF00;
+COLOR:#FFFFFF;
+border: 2px #CCCCCC inset;
+}
+
+tr.grid {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+ BACKGROUND-COLOR:#FFCCCC;
+COLOR:#000000;
+}
+
+tr.grid:hover {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#FFFFFF;
+COLOR:#000000;
+border: 1px #CCCCCC solid;
+}
+
+tr.gridalternada {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+ BACKGROUND-COLOR:#CCCCCC;
+COLOR:#000000;
+border: 1px #CCCCCC solid;
+}
+
+tr.gridalternada:hover {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#FFFFFF;
+COLOR:#000000;
+border: 1px #CCCCCC solid;
+}
+
+.dategrid{
+border:0px;
+}
+
+td.dategridatual
+{
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#CCFFFF;
+COLOR:#000000;
+padding:5px;
+border: 0px #CCCCCC solid;
+}
+
+.dategridhead td{
+background:#F0F0CC;
+width:40px;
+}
+
+.dategrid a{
+padding:5px;
+}
+.dategrid td:hover{
+background:#FFF9F9;}
+
+td.dategridant
+{
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+BACKGROUND-COLOR:#F0F0F0;
+COLOR:#000000;
+border: 0px #CCCCCC solid;
+}
+
+/*do relatorio*/
+
+table.gridtable_ready
+{ 
+border: 1px solid black;
+
+}
+
+table.gridtable_ready thead{display:table-header-group; border:1px solid black;}
+table.gridtable_ready td{border:1px solid #999999;}
+
+td.gridtd_ready
+{
+padding:1px;
+border:1px solid #000000;
+}
+
+/*
+tr.grid_ready {
+COLOR:#FFFFFF;
+border:1px solid Blue;
+} 
+*/
+
+td.gridh_ready {
+font: bold 12px Verdana,Arial,Helvetica,sans-serif;
+padding:4px;
+border: 2px solid Black;
+}
