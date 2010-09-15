@@ -51,7 +51,7 @@ while [ true ]; do
     fi
     totalpag=$(find $caminho"tmp/" -iname "*.jpg" | grep -ic .jpg);
     
-    cd /paginas/docs/
+    cd $dir_install
     
     phpargs="index.php Shell newDoc 1 $o $totalpag";
 
