@@ -13,7 +13,7 @@ class knl_lib_doc_DocEdit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco (){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
  	
   	$Doc = knl_dao_doc::getInstance();
   	$mDoc = $Doc->selectById($request->getpost('id'));

@@ -1,7 +1,7 @@
 <?php
 /*
  * pagina atual, limite de paginas, total de registros, 
- * regitro de, registro até,
+ * regitro de, registro atÃ©,
  * array com parametros usados na pesquisa fornecidos pelo usuario, com chave do $_REQUEST e valor. 
  */  
 class knl_lib_Paginacao {

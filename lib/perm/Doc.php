@@ -5,7 +5,7 @@ class knl_lib_perm_Doc {
   
   private function __construct(){}
   
-  public function getInstance(){
+  public static function getInstance(){
   	if (!isset(self::$instance)){
   		self::$instance = new self();
   	}
@@ -26,7 +26,7 @@ class knl_lib_perm_Doc {
 		}
 	}
 	if ($vis == 0){
-		echo "Permiss„o negada! Documento n„o existente, ou sem permissıes para visualizar.";
+		echo "Permiss√£o negada! Documento n√£o existente, ou sem permiss√µes para visualizar.";
 		die();
 	}
   }

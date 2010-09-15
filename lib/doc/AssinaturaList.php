@@ -13,7 +13,7 @@ class knl_lib_doc_AssinaturaList {
   }
   
   public function listaAssinaturas(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$Assina = knl_dao_doc_assinatura::getInstance();
   	$mAssina = $Assina->selectByIdDoc($request->getGet('id'));
   	$Usuario = knl_dao_knl_usuario::getInstance();

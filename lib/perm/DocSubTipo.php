@@ -5,7 +5,7 @@ class knl_lib_perm_DocSubTipo {
   
   private function __construct(){}
   
-  public function getInstance(){
+  public static function getInstance(){
   	if (!isset(self::$instance)){
   		self::$instance = new self();
   	}

@@ -14,7 +14,7 @@ class knl_lib_doc_AnexoAdd {
   
   public function AddAnexo(){
   	$session = knl_lib_Registry::getSession();
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$doc_anexo = $request->getGet('doc_anexo');
   	
   	if (empty($doc_anexo)){

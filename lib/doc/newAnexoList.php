@@ -18,7 +18,7 @@ class knl_lib_doc_newAnexoList {
   	 * e passar para o dao_doc se virar
   	 * dao_doc traz o array com os models da listagem
   	 */
-    $request = knl_lib_Registry::getRequest();
+    $request = knl_lib_Registry::getRequestObj();
   	$session = knl_lib_Registry::getSession();
   	
   	$filtro = knl_lib_doc_MontaFiltro::getInstance();

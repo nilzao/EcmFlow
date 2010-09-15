@@ -13,7 +13,7 @@ class knl_lib_doc_DocShow {
   }
 
   public function getDocumento($id){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$Doc = knl_dao_doc::getInstance();
   	$mDoc = $Doc->selectById($id);
   	return $mDoc;

@@ -19,7 +19,7 @@ class knl_lib_doc_DocMail {
   	
   	$mail->AddReplyTo("contato@capitalphp.com.br","CapitalPhp");
 		
-	$mail->Subject    = "Envio de ".$docFull["docTipo"]->get_descricao()." Número: ".$mDoc->get_numero();
+	$mail->Subject    = "Envio de ".$docFull["docTipo"]->get_descricao()." NÃºmero: ".$mDoc->get_numero();
 	
 	
 	//$address = "andre@capitalphp.com.br";

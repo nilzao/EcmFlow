@@ -13,7 +13,7 @@ class knl_lib_doc_AnexoDel {
   }
   
   public function DelAnexo(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$request->getGet("id");
   	$request->getGet("doc_id");
   	$request->getGet("doc_anexo");

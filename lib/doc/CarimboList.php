@@ -13,7 +13,7 @@ class knl_lib_doc_CarimboList {
   }
   
   public function listaCarimbos(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$Carimbos = knl_dao_doc_carimbo::getInstance();
   	$mCarimbos = $Carimbos->selectByIdDoc($request->getGet('id'));
     $CarimboTipo = knl_dao_carimbo::getInstance();

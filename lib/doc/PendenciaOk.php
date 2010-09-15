@@ -23,7 +23,7 @@ class knl_lib_doc_PendenciaOk {
   			// excluir a pendencia em questao
   			$Pend->deleteById($v->get_id());
   			
-  			// retirar permissão de edição do grupo e de outros do documento em questao
+  			// retirar permissÃ£o de ediÃ§Ã£o do grupo e de outros do documento em questao
   			$mCred = $Cred->selectByIdDocUsuarioGrupo($v->get_id_doc(),$v->get_id_knl_usuario(),$v->get_id_knl_grupo());
   			foreach ($mCred as $c){
   				if($c->get_perm_usuario() & 256){
@@ -58,7 +58,7 @@ class knl_lib_doc_PendenciaOk {
   			// excluir a pendencia em questao
   			$Pend->deleteById($v->get_id());
   			
-  			// retirar permissão de edição do grupo e de outros do documento em questao
+  			// retirar permissÃ£o de ediÃ§Ã£o do grupo e de outros do documento em questao
   			$mCred = $Cred->selectByIdDocUsuarioGrupo($v->get_id_doc(),$v->get_id_knl_usuario(),$v->get_id_knl_grupo());
   			foreach ($mCred as $c){
   				if($c->get_perm_usuario() & 128){
@@ -94,7 +94,7 @@ class knl_lib_doc_PendenciaOk {
   			// excluir a pendencia em questao
   			$Pend->deleteById($v->get_id());
   			
-  			// retirar permissão de aprovação do grupo e de outros do documento em questao
+  			// retirar permissÃ£o de aprovaÃ§Ã£o do grupo e de outros do documento em questao
   			$mCred = $Cred->selectByIdDocUsuarioGrupo($v->get_id_doc(),$v->get_id_knl_usuario(),$v->get_id_knl_grupo());
   			foreach ($mCred as $c){
   				if($c->get_perm_usuario() & 128){

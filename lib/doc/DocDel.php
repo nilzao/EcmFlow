@@ -12,7 +12,7 @@ class knl_lib_doc_DocDel {
   }
   
   public function LimpaDoc (){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$id_doc = $request->getGet('id');
   	$DocCred = knl_dao_doc_cred::getInstance();
   	$DocCred->deleteByIdDoc($id_doc);

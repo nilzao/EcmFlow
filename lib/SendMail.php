@@ -21,7 +21,7 @@ class knl_lib_SendMail {
 		$body = $body."\n\n<br><br>
 		---------------------------------------------------------------------------------------------------------------<br>
 		Documento enviado pelo sistema EcmFlow <a href=\"http://www.capitalphp.com.br/\">www.capitalphp.com.br</a><br>
-		Seus documentos sempre a sua disposição<br><br>";
+		Seus documentos sempre a sua disposiÃ§Ã£o<br><br>";
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->Host       = "smtp.gmail.com"; // SMTP server

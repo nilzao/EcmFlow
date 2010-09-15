@@ -13,7 +13,7 @@ class knl_lib_doc_MontaFiltro extends knl_lib_daoext_Convert {
   
   public function montaFiltro () {
   	$session = knl_lib_Registry::getSession();
-    $request = knl_lib_Registry::getRequest();
+    $request = knl_lib_Registry::getRequestObj();
   	$tipoClasse = "";
   	if ($request->getRequest('doc_tipo')){
   	    $DocTipo = knl_dao_doc_tipo::getInstance();
