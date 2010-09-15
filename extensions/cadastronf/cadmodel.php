@@ -60,7 +60,7 @@ class knl_extensions_cadastronf_cadmodel {
 
      public function set_razao($razao) {
         $this->razao = strtoupper($razao);
-        $this->razao = strtr($this->razao, "·‡‰‚„ÁÒÈËÎÍÌÏÔÓÛÚˆÙı˙˘¸˚", "¡¿ƒ¬√«—…»À ÕÃœŒ”“÷‘’⁄Ÿ‹€");
+        $this->razao = strtr($this->razao, "√°√†√§√¢√£√ß√±√©√®√´√™√≠√¨√Ø√Æ√≥√≤√∂√¥√µ√∫√π√º√ª", "√Å√Ä√Ñ√Ç√É√á√ë√â√à√ã√ä√ç√å√è√é√ì√í√ñ√î√ï√ö√ô√ú√õ");
      }
 
      public function set_estado($estado) {

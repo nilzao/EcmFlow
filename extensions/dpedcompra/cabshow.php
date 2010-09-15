@@ -7,8 +7,8 @@ $vars['d_ped_compra_title;Documento:'] = "Pedido de compra";
 $htmldiv = "<div id=\"docH\">";
 $helperShowDiv->set_html_Div($htmldiv);
 $vars['d_ped_compraFull_forn_cnpj;Cnpj:'] = $pedc['dpedcompraFull']['forn']->get_cnpj();
-$vars['d_ped_compraFull_forn_razao;Razão social:'] = $pedc['dpedcompraFull']['forn']->get_razao();
-$vars['d_ped_compraFull_forn_ie;Inscrição estadual:'] = $pedc['dpedcompraFull']['forn']->get_ie();
+$vars['d_ped_compraFull_forn_razao;RazÃ£o social:'] = $pedc['dpedcompraFull']['forn']->get_razao();
+$vars['d_ped_compraFull_forn_ie;InscriÃ§Ã£o estadual:'] = $pedc['dpedcompraFull']['forn']->get_ie();
 $vars['d_ped_compraFull_forn_estado;Estado:'] = $pedc['dpedcompraFull']['forn']->get_estado();
 
 $select = "<select id=\"d_ped_compraFull_dataentrega_combo\" size=\"3\">\n";

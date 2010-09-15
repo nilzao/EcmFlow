@@ -1,5 +1,5 @@
--- Extens„o de nota fiscal de saida
--- requer extens„o cadastronf instalada
+-- Extens√£o de nota fiscal de saida
+-- requer extens√£o cadastronf instalada
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `d_nf_saida` (
 --
 
 INSERT INTO `doc_tipo` (`id`, `descricao`, `classe`) VALUES 
-(2, 'Nf de SaÌda', 'dnfsaida');
+(2, 'Nf de Sa√≠da', 'dnfsaida');
 
 --
 -- Extraindo dados da tabela `doc_tipo_cred`
@@ -40,7 +40,7 @@ INSERT INTO `doc_tipo_cred`
 --
 
 INSERT INTO `doc_sub_tipo` (`id`, `id_doc_tipo`, `descricao`, `path`) VALUES 
-(2, 2, 'Nf SaÌda Venda', '/docinput/comercial/NfVenda');
+(2, 2, 'Nf Sa√≠da Venda', '/docinput/comercial/NfVenda');
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_regra_cred`

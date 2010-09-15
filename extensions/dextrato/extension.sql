@@ -1,4 +1,4 @@
--- Extensão de extrato de bancos
+-- ExtensÃ£o de extrato de bancos
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -40,7 +40,7 @@ INSERT INTO `d_extrato_agencia` (`id`) VALUES
 (-1);
 
 INSERT INTO `d_extrato_agencia` (`id`,`id_banco`,`numero`,`descricao`) VALUES
-(1,1,'1234-5','Agência de Itaquaquecetuba do Norte');
+(1,1,'1234-5','AgÃªncia de Itaquaquecetuba do Norte');
 
 -- --------------------------------------------------------
 

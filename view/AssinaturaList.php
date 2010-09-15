@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Assinaturas</title>
  </head>
  <body bgcolor="FFFFFF">
@@ -10,7 +11,7 @@ $id_doc = $knl_helper->getVar("id_doc");
   <h1>Assinaturas</h1>
    <?php
     echo "<a href=\"index.php?domain=Doc&action=AssinaturaAdd&id={$id_doc}&atp=1\">Assinar</a> ";
-    echo "<a href=\"index.php?domain=Doc&action=AssinaturaAdd&id={$id_doc}&atp=4\">Lançar</a><br>";
+    echo "<a href=\"index.php?domain=Doc&action=AssinaturaAdd&id={$id_doc}&atp=4\">LanÃ§ar</a><br>";
     //print_r($lista);
     
 foreach ($lista as $v) {

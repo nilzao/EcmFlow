@@ -1,8 +1,8 @@
 <?php
-header("Content-type: text/xml; charset=ISO-8859-1");
+header("Content-type: text/xml; charset=UTF-8");
 header("pragma: no-cache");
 header("cache-control: no-cache");
-print '<?xml version="1.0" encoding="ISO-8859-1"?>';
+print '<?xml version="1.0" encoding="UTF-8"?>';
 $fornecedor = $knl_helper->getVar("fornecedor");
 
 echo "<opcao>

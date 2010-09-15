@@ -1,14 +1,14 @@
 <?php
 // comentario 3, testando denovo
 class knl_controller_FrontController {
-  public function dispatch($shellArray)
+  public static function dispatch($shellArray)
   {
       	//knl_lib_Perm::verificaDomain(isset($_REQUEST['domain'])?$_REQUEST['domain']:'');
       	$shell = knl_lib_Registry::getShellArgs();
       	$shell->setShellArgs($shellArray);
       	
       	$shellArg1 = $shell->getShellArg(1);
-      	$request = knl_lib_Registry::getRequest()->getInstance();
+      	$request = knl_lib_Registry::getRequestObj()->getInstance();
 
       	$domain = !empty($shellArg1) ? $domain = $shell->getShellArg(1) : $request->getRequest('domain');
       	$extdm = $request->getRequest('extdm');

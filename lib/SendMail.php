@@ -45,7 +45,7 @@ class knl_lib_SendMail {
 		
 		
 		
-		$address = "andre@capitalphp.com.br";
+		$address = "john@gmail.com.br";
 		$mail->AddAddress($address, "John Doe");
 		*/
 		//$mail->AddAttachment("images/phpmailer.gif");      // attachment

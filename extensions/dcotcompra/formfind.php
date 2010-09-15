@@ -1,4 +1,4 @@
 <div id="dcotcompra" style="display:block">
-Cotação de Compra:<br>
+CotaÃ§Ã£o de Compra:<br>
 <br>
 </div>

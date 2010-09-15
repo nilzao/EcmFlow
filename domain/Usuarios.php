@@ -12,7 +12,7 @@ class knl_domain_Usuarios {
   }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$metodo = $request->getGet('action');
   	if (method_exists($this,$metodo)){
   		$this->$metodo();
@@ -28,7 +28,7 @@ class knl_domain_Usuarios {
   }
 
   public function lstdepto(){
-      $request = knl_lib_Registry::getRequest()->getInstance();
+      $request = knl_lib_Registry::getRequestObj()->getInstance();
 
       $usuario = knl_dao_knl_usuario::getInstance()->selectById(
       $request->GetGet("id_usu"));
@@ -42,7 +42,7 @@ class knl_domain_Usuarios {
   }
 
   public function savedepto(){
-      $request = knl_lib_Registry::getRequest()->getInstance();
+      $request = knl_lib_Registry::getRequestObj()->getInstance();
       $id_usu = $request->getPost("id_usu");
       $deptos = $request->getPost("deptos");
       

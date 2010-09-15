@@ -93,7 +93,7 @@ function add_div{$nome} () {
     public function monta_CampoValorJs() {
 		$this->CampoValorJs = "
 <script>
-// aqui vai uma vez só o arquivo de javascript pro campo valor  
+// aqui vai uma vez sÃ³ o arquivo de javascript pro campo valor
 </script>
 ";
     }

@@ -12,7 +12,7 @@ class knl_extensions_dcaixa_edit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
 
   	$Caixa = knl_extensions_dcaixa_dao::getInstance();
   	$mCaixa = $Caixa->selectByIdDoc($request->getpost('id'));

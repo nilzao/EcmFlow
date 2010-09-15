@@ -1,5 +1,5 @@
--- Extens„o de cotaÁ„o de compra
--- requer extens„o cadastronf instalada
+-- Extens√£o de cota√ß√£o de compra
+-- requer extens√£o cadastronf instalada
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `d_cot_compra` (
 --
 
 INSERT INTO `doc_tipo` (`id`, `descricao`, `classe`) VALUES 
-(10, 'CotaÁ„o de Compra', 'dcotcompra');
+(10, 'Cota√ß√£o de Compra', 'dcotcompra');
 
 --
 -- Extraindo dados da tabela `doc_tipo_cred`
@@ -38,7 +38,7 @@ INSERT INTO `doc_tipo_cred`
 --
 
 INSERT INTO `doc_sub_tipo` (`id`, `id_doc_tipo`, `descricao`, `path`) VALUES 
-(10, 10, 'CotaÁ„o de Compra', '/docinput/compras/Cotacao');
+(10, 10, 'Cota√ß√£o de Compra', '/docinput/compras/Cotacao');
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_regra_cred`

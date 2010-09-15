@@ -10,6 +10,7 @@ $helperForm->monta_DocTipoDiv($tipos);
 ?>
 <html>
  <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $helperForm->monta_FormsSpec($tipos);
 echo $helperForm->js_FormsSpec();
@@ -32,8 +33,8 @@ if($knl_helper->isSetVar("head")){
   <input type="hidden" name="action" value="DocList"/>
 
   Documento: <input type="text" name="doc_num" /><br/>
-  Data Emiss„o De: <input type="text" name="data_ini" /> 
-  AtÈ: <input type="text" name="data_fim" /><br/><br>
+  Data Emiss√£o De: <input type="text" name="data_ini" /> 
+  At√©: <input type="text" name="data_fim" /><br/><br>
   Tipo: 
 <?php
 echo $helperForm->html_DocTipoCombo();

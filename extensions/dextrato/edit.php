@@ -12,7 +12,7 @@ class knl_extensions_dextrato_edit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
 
   	$Extrato = knl_extensions_dextrato_dao::getInstance();
   	$mExtrato = $Extrato->selectByIdDoc($request->getpost('id'));

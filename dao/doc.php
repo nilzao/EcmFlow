@@ -46,7 +46,7 @@ class knl_dao_doc {
     	 * retornar dentro da chave do array $lista['detalhes']
     	 *  um objeto knl_lib_Listagem com os atributos contendo:
     	 *  -pagina atual, limite de paginas, total de registros,
-    	 *   regitro de, registro até,
+    	 *   regitro de, registro atÃ©,
     	 *   array com parametros usados na pesquisa fornecidos pelo usuario, com chave do $_REQUEST e valor.  
          */
        //$listagem = knl_lib_Listagem::getInstance(50);

@@ -9,6 +9,7 @@ $helperForm = knl_view_hlp_FormFind::getInstance();
 ?>
 <html>
  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $helperForm->monta_FormsSpec($tipos);
 echo $helperForm->js_FormsSpec();
@@ -26,8 +27,8 @@ echo $helperForm->js_FormsSpec();
   <input type="hidden" name="id" value="<?php echo $id_doc; ?>"/>
 
   Documento: <input type="text" name="doc_num" /><br/>
-  Data Emiss„o De: <input type="text" name="data_ini" /> 
-  AtÈ: <input type="text" name="data_fim" /><br/><br>
+  Data Emiss√£o De: <input type="text" name="data_ini" /> 
+  At√©: <input type="text" name="data_fim" /><br/><br>
   Tipo: 
 <?php
 $helperForm->monta_DocTipoCombo($tipos);

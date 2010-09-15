@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $helperLista = knl_view_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
@@ -19,7 +20,7 @@ $domainAction = $knl_helper->getVar("domainAction");
 $helperPag->monta_Paginacao($paginacao,$domainAction);
 echo $helperPag->html_Paginacao();
 
-$cab = array("Id","Inicio","Fim","Banco","Agência","Conta");
+$cab = array("Id","Inicio","Fim","Banco","AgÃªncia","Conta");
 $valores = array("get_id"=>"doc","get_data_ini"=>"dextrato","get_data_fim"=>"dextrato","get_nome"=>"dextratoFull,d_extrato_banco","get_numero/"=>"dextratoFull,d_extrato_agencia","get_numero"=>"dextratoFull,d_extrato_conta");
 //print_r($lista);die();
 $helperLista->monta_Lista($lista,$cab,$valores);

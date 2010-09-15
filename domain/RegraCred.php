@@ -12,7 +12,7 @@ class knl_domain_RegraCred {
   }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$metodo = $request->getGet('action');
   	if (method_exists($this,$metodo)){
   		$this->$metodo();
@@ -58,7 +58,7 @@ class knl_domain_RegraCred {
   
   public function del(){
   	echo "del em RegraCred<br>";
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$id_regra = $request->getGet('id_regra');
   	//echo $id_regra;
   	knl_dao_doc_sub_tipo_regra_cred::getInstance()->deleteById($id_regra);
@@ -77,7 +77,7 @@ class knl_domain_RegraCred {
   }
   
   public function add(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$arr_grupos = $request->getPost("grupos");
   	$doc_pend_tp = $request->getPost("pendtipo");
   	$doc_sub_tp = $request->getPost("docsubtipo");

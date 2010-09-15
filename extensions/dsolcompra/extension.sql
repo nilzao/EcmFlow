@@ -1,4 +1,4 @@
--- Extens„o de solicitaÁ„o de compra
+-- Extens√£o de solicita√ß√£o de compra
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `d_sol_compra` (
 --
 
 INSERT INTO `doc_tipo` (`id`, `descricao`, `classe`) VALUES 
-(9, 'SolicitaÁ„o de Compra', 'dsolcompra');
+(9, 'Solicita√ß√£o de Compra', 'dsolcompra');
 
 --
 -- Extraindo dados da tabela `doc_tipo_cred`
@@ -35,7 +35,7 @@ INSERT INTO `doc_tipo_cred`
 --
 
 INSERT INTO `doc_sub_tipo` (`id`, `id_doc_tipo`, `descricao`, `path`) VALUES 
-(9, 9, 'SolicitaÁ„o de Compra', '/docinput/compras/Solicitacao');
+(9, 9, 'Solicita√ß√£o de Compra', '/docinput/compras/Solicitacao');
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_regra_cred`

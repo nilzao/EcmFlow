@@ -13,7 +13,7 @@ class knl_extensions_dcotcompra_filtro extends knl_lib_daoext_Convert {
     public function montaFiltro(){
       $filtro = array();      
       /*
-    	$request = knl_lib_Registry::getRequest();
+    	$request = knl_lib_Registry::getRequestObj();
     	$filtro = array('data1'=>$this->data_br_to_mysql($request->getRequest('data1')),
     	                'data2'=>$this->data_br_to_mysql($request->getRequest('data2')));
     	*/

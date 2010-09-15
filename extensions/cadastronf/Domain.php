@@ -11,13 +11,13 @@ class knl_extensions_cadastronf_Domain {
     }
 	
 	public function handle() {
-		$request = knl_lib_Registry::getRequest()->getInstance();
+		$request = knl_lib_Registry::getRequestObj()->getInstance();
 		$metodo = $request->getGet('action');
 		$this->$metodo();
 	}
 	
 	public function FornList () {		
-		$request = knl_lib_Registry::getRequest();
+		$request = knl_lib_Registry::getRequestObj();
 		
 		$razao = $request->getGet('razao');
 
@@ -33,7 +33,7 @@ class knl_extensions_cadastronf_Domain {
 	}
 	
 	public function FornFind () {
-		$request = knl_lib_Registry::getRequest();
+		$request = knl_lib_Registry::getRequestObj();
 		$cnpj = $request->getGet('cnpj');
 		$fornecedor = knl_extensions_cadastronf_caddao::getInstance()->selectByCnpj($cnpj);
 			$vl = knl_view_Loader::getInstance();
@@ -42,7 +42,7 @@ class knl_extensions_cadastronf_Domain {
 	}
 
 	public function FornFindChar() {
-		$request = knl_lib_Registry::getRequest();
+		$request = knl_lib_Registry::getRequestObj();
 		$str_parte = $request->getGet('nome');
 		$cotacao_cli = knl_extensions_cadastronf_cotDao::getInstance()->selectByParteNome($str_parte);
 		$vl = knl_view_Loader::getInstance();

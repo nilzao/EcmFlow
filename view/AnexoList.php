@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $helperLista = knl_view_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
@@ -70,7 +71,7 @@ echo " &nbsp; ";
 echo $helperShowBtn->html_Action("Anexar");
 //echo "<br><br>";
 
-$cab = array("Id","Tipo","Emissão","Número","Desanexar","Marcar");
+$cab = array("Id","Tipo","EmissÃ£o","NÃºmero","Desanexar","Marcar");
 $valores = array("get_id"=>"doc","get_descricao"=>"docTipo","get_data_doc"=>"doc","get_numero"=>"doc",";#DesanexaBtn"=>"Desanexa",";#AnexaMarcaBtn"=>"MarcaAnexo");
 //print_r($lista);die();
 $helperLista->monta_Lista($lista,$cab,$valores);

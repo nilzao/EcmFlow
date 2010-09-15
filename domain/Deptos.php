@@ -12,7 +12,7 @@ class knl_domain_Deptos {
   }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$metodo = $request->getGet('action');
   	if (method_exists($this,$metodo)){
   		$this->$metodo();

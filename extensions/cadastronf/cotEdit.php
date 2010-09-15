@@ -12,7 +12,7 @@ class knl_extensions_cadastronf_cotEdit {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
 
   	$CotacaoCli = knl_extensions_cadastronf_cotDao::getInstance();
   	$mCotacaoCli = $CotacaoCli->selectByNome($request->getpost('razao'));

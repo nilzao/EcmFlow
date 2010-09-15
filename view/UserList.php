@@ -1,12 +1,14 @@
 <html>
-<head><title></title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
 <link rel="stylesheet" href="view/css/lista.css" type="text/css">
 </head>
 <body bgcolor="FFFFFF">
 <?php
 $listausuarios = $knl_helper->getVar("users");
 ?>
-  <h1>Usu·rios</h1>
+  <h1>Usu√°rios</h1>
 <?php
 //print_r($listausuarios);
 foreach($listausuarios as $v){

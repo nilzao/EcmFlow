@@ -12,7 +12,7 @@ class knl_extensions_dpedcompra_edit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
 
   	$forn = knl_extensions_cadastronf_cadedit::getInstance()->gravaNoBanco();
  	

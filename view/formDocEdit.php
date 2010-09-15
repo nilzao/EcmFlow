@@ -10,7 +10,8 @@
 ?>
 <html>
 <head>
-<title>Edição</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>EdiÃ§Ã£o</title>
 <?php
 
 echo $helperFormEdit->js_Js();

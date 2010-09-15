@@ -13,7 +13,7 @@ class knl_domain_Empresa {
   }
   
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
       switch($request->getGet('action')) {
     	case "set":
     		$this->setEmpresa($request->getGet('id'));
@@ -36,7 +36,7 @@ class knl_domain_Empresa {
   
   public function setEmpresa($id_empresa){
   	$session = knl_lib_Registry::getSession();
-  	$request = knl_lib_registry::getRequest();
+  	$request = knl_lib_registry::getRequestObj();
     $session->set_id_empresa($request->getGet('id'));  	
   	  	//$vl = knl_view_Loader::getInstance();
         //$vl->setVar("empresa",$mEmpresa);

@@ -2,7 +2,7 @@
 class knl_view_hlp_Paginacao {
 	private static $instance;
 	private $Paginacao = "";
-	private $ProximaPag = "Próxima";
+	private $ProximaPag = "PrÃ³xima";
 	private $PagAnterior = "Anterior";
 	private $Atualiza = "";
 	/*

@@ -31,7 +31,7 @@ class knl_domain_Shell {
     	/*
     	 * shell arg2: newDoc ou upDoc ou addPag
     	 * shell arg3: empresa
-    	 * shell arg4: caminho completo path/nome_arquivo (contém o numero do documento e path para saber qual doc_tipo trabalhar)
+    	 * shell arg4: caminho completo path/nome_arquivo (contÃ©m o numero do documento e path para saber qual doc_tipo trabalhar)
     	 * shell arg5: qtd paginas
     	 *  
     	 *  exemplo: php index.php Shell newDoc PedCompra   1    112233   1 
@@ -56,7 +56,7 @@ class knl_domain_Shell {
     	 * instanciar models doc_cred, doc_pendencia,
     	 * colocar eles nos respectivos daos, chamar o metodo upsert dos daos.
     	 * isso vai fazer com que as regras definidas em regra_cred e regra_pend
-    	 * sejam criadas para o novo documento em questão.
+    	 * sejam criadas para o novo documento em questÃ£o.
     	 * 
          */
     	//print_r($shell->getShellArgArray());
@@ -122,7 +122,7 @@ class knl_domain_Shell {
     	}
     	copy($shell->getShellArg(4),$path_sistema.$shell->getShellArg(3)."_".$num_pag.".jpg");
     	
-    	/* adaptação para pedVendas que vem do fs... implementar outra solução que venha do banco com angulo do subtipo*/
+    	/* adaptaÃ§Ã£o para pedVendas que vem do fs... implementar outra soluÃ§Ã£o que venha do banco com angulo do subtipo*/
     	//$Doc = knl_dao_doc::getinstance();
     	//$mDoc= $Doc->selectById($shell->getShellArg(3));
     	//if ($mDoc->get_id_doc_sub_tipo() == 8){

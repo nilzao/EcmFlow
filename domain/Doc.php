@@ -12,7 +12,7 @@ class knl_domain_Doc {
   }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$metodo = $request->getGet('action');
   	if (method_exists($this,$metodo)){
   		$this->$metodo();
@@ -52,7 +52,7 @@ class knl_domain_Doc {
   }
   
   public function DocShow() {
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$DocVis = knl_lib_perm_Doc::getInstance();
   	$DocVis->verificaDocVis($request->getGet('id'));
   	$DocShow = knl_lib_doc_DocShow::getInstance();
@@ -71,7 +71,7 @@ class knl_domain_Doc {
   }
   
   public function DocEditForm(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$session = knl_lib_Registry::getSession();
   	$DocShow = knl_lib_doc_DocShow::getInstance();
   	$doc = $DocShow->getDocumento($request->getGet('id'));
@@ -89,7 +89,7 @@ class knl_domain_Doc {
   }
   
   public function DocEdit(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$docEdit = knl_lib_doc_DocEdit::getInstance();
   	$docEdit->gravaNoBanco();
   	$PendOk = knl_lib_doc_PendenciaOk::getInstance();
@@ -117,7 +117,7 @@ class knl_domain_Doc {
   }
   
   private function DocAprova(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$docAprova = knl_lib_doc_Aprova::getInstance();
   	$docAprova->Aprovado($request->getget('id'));
   	$PendOk = knl_lib_doc_PendenciaOk::getInstance();
@@ -126,7 +126,7 @@ class knl_domain_Doc {
   }
   
   private function DocReprova(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$docReprova = knl_lib_doc_Aprova::getInstance();
   	$docReprova->Reprovado($request->getget('id'));
   	$PendOk = knl_lib_doc_PendenciaOk::getInstance();
@@ -163,7 +163,7 @@ class knl_domain_Doc {
   }
   
   public function AssinaturaAdd(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$docAssina = knl_lib_doc_Assina::getInstance();
   	$docAssina->gravaNoBanco($request->getget('id'),$request->getget('atp'));
   	$PendOk = knl_lib_doc_PendenciaOk::getInstance();
@@ -172,7 +172,7 @@ class knl_domain_Doc {
   }
   
   public function AssinaturaList(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$AssinaList = knl_lib_doc_AssinaturaList::getInstance();
   	$lista = $AssinaList->listaAssinaturas();
   	  	$vl = knl_view_Loader::getInstance();
@@ -190,7 +190,7 @@ class knl_domain_Doc {
   }
   
   public function ObsList(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$ObsList = knl_lib_doc_ObservacaoList::getInstance();
   	$pag = $request->getGet('pag');
   	$pag = empty($pag) ? 1 : $request->getGet('pag') ;
@@ -203,7 +203,7 @@ class knl_domain_Doc {
   }
   
   public function ObsAddForm(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	/*
   	$ObsList = knl_lib_doc_ObservacaoList::getInstance();
   	$lista = $ObsList->listaObservacoes();
@@ -214,7 +214,7 @@ class knl_domain_Doc {
   }
   
   public function ObsAdd(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	knl_lib_doc_ObservacaoAdd::getInstance()->AddObs();
   	/*
   	$ObsList = knl_lib_doc_ObservacaoList::getInstance();
@@ -227,7 +227,7 @@ class knl_domain_Doc {
   }
   
   public function ObsSetxy(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$dObs = knl_dao_doc_obs::getInstance();
   	$mObs = $dObs->selectById($request->getGet("id_marca"));
   	$x = str_replace("px","",$request->getGet("x"));
@@ -241,7 +241,7 @@ class knl_domain_Doc {
   }
   
   public function MarcaTxtAdd(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$id_doc = $request->getGet("id_doc");
   	$x = 50;
   	$y = $request->getGet("y");
@@ -258,7 +258,7 @@ class knl_domain_Doc {
   }
   
   public function MarcaTxtSetxywh(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$dMtxt = knl_dao_doc_marca_texto::getInstance();
   	$id = $request->getGet("id_marcatxt");
   	$id_doc = $request->getGet("id_doc");
@@ -273,14 +273,14 @@ class knl_domain_Doc {
   }
   
   public function MarcaTxtDel(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$dMtxt = knl_dao_doc_marca_texto::getInstance();
   	$id = $request->getGet("id_marcatxt");
   	$dMtxt->deleteById($id);
   }
   
   public function MarcaTxtGetXml(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$dMtxt = knl_dao_doc_marca_texto::getInstance();
   	$id_doc = $request->getGet("id_doc");
   	$pag = $request->getGet("pag");
@@ -298,7 +298,7 @@ class knl_domain_Doc {
   }
   
   public function AnexoList(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$DocShow = knl_lib_doc_DocShow::getInstance();
   	$doc = $DocShow->getDocumento($request->getGet('doc_id'));
   	$cabecalho = $DocShow->getDocumentoFull($doc);
@@ -337,7 +337,7 @@ class knl_domain_Doc {
   }
 
   public function newAnexoFind(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$DocFind = knl_lib_doc_newAnexoFind::getInstance(); 
   	$tipos = $DocFind->montaTipos();
   	$subTipos = $DocFind->montaSubTipos();
@@ -349,7 +349,7 @@ class knl_domain_Doc {
   }
   
   public function newAnexoList(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$newAnexoList = knl_lib_doc_newAnexoList::getInstance(); 
   	$lista = $newAnexoList->montaLista();
   	  	$vl = knl_view_Loader::getInstance();
@@ -370,7 +370,7 @@ class knl_domain_Doc {
   }
   
   public function AnexoAdd(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$AnexoAdd = knl_lib_doc_AnexoAdd::getInstance();
   	$DocAnexo = $AnexoAdd->AddAnexo();
   	$PendOk = knl_lib_doc_PendenciaOk::getInstance();
@@ -380,7 +380,7 @@ class knl_domain_Doc {
   }
   
   public function AnexoSetxy(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$dAnexo = knl_dao_doc_anexo::getInstance();
   	$mAnexo = $dAnexo->selectById($request->getGet("id_marca"));
   	$x = str_replace("px","",$request->getGet("x"));
@@ -394,7 +394,7 @@ class knl_domain_Doc {
   }
   
   public function MailForm() {
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$DocShow = knl_lib_doc_DocShow::getInstance();
   	$doc = $DocShow->getDocumento($request->getGet('doc_id'));
   	$cabecalho = $DocShow->getDocumentoFull($doc);
@@ -405,7 +405,7 @@ class knl_domain_Doc {
   }
   
   public function MailSend() {
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	$DocShow = knl_lib_doc_DocShow::getInstance();
   	$doc = $DocShow->getDocumento($request->getPost('doc_id'));
   	$cabecalho = $DocShow->getDocumentoFull($doc);
@@ -418,7 +418,7 @@ class knl_domain_Doc {
   }
   
   public function DocAuthAprova(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	
   	$valores = array();
 	$valores['blueprint-sticky.png']=1;
@@ -503,7 +503,7 @@ class knl_domain_Doc {
 	//alert("ok");
 	parent.displayAuthResultFail();
 	</script>
-	Falha na autenticação!<br>
+	Falha na autenticaÃ§Ã£o!<br>
 	Por favor, tente novamente
 			<?php
 			die();

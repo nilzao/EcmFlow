@@ -6,7 +6,7 @@ $knl_helper->setVar("head","<script type=\"text/javascript\" src=\"./extensions/
 $helperFormEdit->monta_CampoData($nfsaida['dnfsaida']->get_datasai(),"datasai");
 //print_r($nfsaida);
 ?>
-<td>Data Saída: </td><td><?php echo $helperFormEdit->html_CampoData('datasai'); ?></td>
+<td>Data SaÃ­da: </td><td><?php echo $helperFormEdit->html_CampoData('datasai'); ?></td>
 <?php
 $vl = knl_view_Loader::getInstance();
     	$vl->setVar('fornecedor',$fornecedor);

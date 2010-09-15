@@ -1,4 +1,4 @@
 <div id="dcotvenda" style="display:block">
-Cotação de Venda:<br>
+CotaÃ§Ã£o de Venda:<br>
 <br>
 </div>

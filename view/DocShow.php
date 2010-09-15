@@ -11,8 +11,8 @@
  $actions = $cabecalho['docActions'];
  $helperShowBtn->monta_Actions($actions,$obsCount);
 
- $vars['doc_data;Data de emissão:'] = $documento->get_data_doc();
- $vars['doc_numero;Número:'] = $documento->get_numero();
+ $vars['doc_data;Data de emissÃ£o:'] = $documento->get_data_doc();
+ $vars['doc_numero;NÃºmero:'] = $documento->get_numero();
  
  $htmldiv ="<div id=\"doc\">\n";
  $helperShowDiv->set_html_Div($htmldiv);
@@ -28,6 +28,7 @@
 
 <html>
  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>
    Documento
   </title>
@@ -339,7 +340,7 @@ function load_div(html){
    </div>
  </div><div id="div_ferramentas"><input type="button" onclick="add_caneta();" value="Add">
  <br><input type="button" onclick="get_canetas();" value="Show"><br>
- <input type="button" onclick="toggle_regua();" value="Régua"><br><br>
+ <input type="button" onclick="toggle_regua();" value="RÃ©gua"><br><br>
  <div id="lixeira_caneta">DEL</div>
  </div>
 <?php

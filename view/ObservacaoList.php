@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $lista = $knl_helper->getVar("lista");
 $id_doc = $knl_helper->getVar("id_doc");

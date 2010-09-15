@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 
 $helperLista = knl_view_hlp_Lista::getInstance();
@@ -36,7 +37,7 @@ $urlAdd = $knl_helper->getVar("urlAdd");
 $helperPag->monta_Paginacao($paginacao,$urlAdd);
 echo $helperPag->html_Paginacao();
 
-$cab = array("Cnpj","Razão Social");
+$cab = array("Cnpj","RazÃ£o Social");
 $valores = array("get_cnpj"=>"d_cad_nf","get_razao"=>"d_cad_nf");
 //print_r($lista);die();
 $onclick = array("***"=>"setCnpj('***')","get_cnpj"=>"d_cad_nf");

@@ -12,7 +12,7 @@ class knl_extensions_dcotvenda_edit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	
   	$cotacao_cli = knl_extensions_cadastronf_cotEdit::getInstance()->gravaNoBanco();
 

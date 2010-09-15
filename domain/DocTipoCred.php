@@ -12,7 +12,7 @@ class knl_domain_DocTipoCred {
   }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$metodo = $request->getGet('action');
   	if (method_exists($this,$metodo)){
   		$this->$metodo();
@@ -45,7 +45,7 @@ class knl_domain_DocTipoCred {
   }
   
   public function add(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
   	$arr_grupos = $request->getPost("grupos");
   	$doc_tipo = $request->getPost("doctipo");
   	

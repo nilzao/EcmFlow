@@ -1,4 +1,4 @@
--- Extens„o de caixas movimento financeiro
+-- Extens√£o de caixas movimento financeiro
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 

@@ -25,7 +25,7 @@ class knl_extensions_dextrato_formHlp extends knl_view_hlp_FormEdit{
     
 	public function monta_ExtratoAgenciaCombo () {
     	$mExtratoAgencia = knl_extensions_dextrato_daoExtratoAgencia::getInstance()->selectAll();
-    	$this->ExtratoAgenciaCombo = "Agência: <select name=\"id_agencia\">";
+    	$this->ExtratoAgenciaCombo = "AgÃªncia: <select name=\"id_agencia\">";
     	$this->ExtratoAgenciaCombo .= "<option value=\"0\">Todas</option>";
     	foreach($mExtratoAgencia as $v) {
     		$this->ExtratoAgenciaCombo .= "<option value=\"{$v->get_id()}\">{$v->get_numero()}</option>";

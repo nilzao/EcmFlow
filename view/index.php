@@ -3,8 +3,8 @@
 ?>
 <html>
  <head>
-  <title>Administração de Documentos</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+  <title>AdministraÃ§Ã£o de Documentos</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="temas/estilo.css" type="text/css"/>
   <script language="JavaScript" type="text/javascript" src="./view/js/jquery.js"></script>
 <script type="text/javascript">
@@ -32,7 +32,7 @@ function alerta_pendencia(msgxml){
 	//var msgdiv = $(msgxml).find('#nois').text();
 	var msgdiv = $(msgxml).find('#totalpendencias').text();
 	if(msgdiv != 0){
-		alert("Você possui pendencias.");
+		alert("VocÃª possui pendencias.");
 	}
 }
 </script>  
@@ -51,7 +51,7 @@ function alerta_pendencia(msgxml){
     <td width="180" height="449" valign="top"> 
      <table width="178" height="100%" border="0" cellpadding="0" cellspacing="0">
       <tr bgcolor="#990000"> 
-       <td height="5" bgcolor="#4671A6" class="texto1">Administração</td>
+       <td height="5" bgcolor="#4671A6" class="texto1">AdministraÃ§Ã£o</td>
       </tr>
       <tr  bgcolor="#CC0000"> 
        <td valign="top" bgcolor="#FFFFFF"> 

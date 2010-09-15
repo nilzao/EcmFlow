@@ -12,7 +12,7 @@ class knl_extensions_dsolcompra_edit extends knl_lib_daoext_Convert {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
 
   	$dsolcompra = knl_extensions_dsolcompra_dao::getInstance();
   	$m_dsolcompra = $dsolcompra->selectByIdDoc($request->getpost('id'));

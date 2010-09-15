@@ -1,4 +1,4 @@
 <div id="dsolcompra" style="display:block">
-Solicitação de compra:<br>
+SolicitaÃ§Ã£o de compra:<br>
 <br>
 </div>

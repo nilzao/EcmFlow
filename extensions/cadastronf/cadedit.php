@@ -12,7 +12,7 @@ class knl_extensions_cadastronf_cadedit {
   }
   
   public function gravaNoBanco(){
-  	$request = knl_lib_Registry::getRequest();
+  	$request = knl_lib_Registry::getRequestObj();
   	
   	$Forn = knl_extensions_cadastronf_caddao::getInstance();
   	$mForn = $Forn->selectByCnpj($request->getpost('cnpj'));

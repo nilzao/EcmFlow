@@ -20,7 +20,7 @@ class knl_view_hlp_ShowPag {
     
     public function monta_Paginas ($id_doc,$pags = 1,$pagatual = 1) {
     	if($pags > 1){
-    		$this->Paginas = "<div id=\"doc_show_paginas_label\">Páginas:</div>\n";
+    		$this->Paginas = "<div id=\"doc_show_paginas_label\">PÃ¡ginas:</div>\n";
     		$this->Paginas .= "<div id=\"doc_show_paginas_div\">\n";
     		$this->Paginas .= "<select id=\"doc_show_paginas_select\" onchange=\"loadPag($id_doc,this.value)\">";
     		for ($i=1;$i<=$pags;$i++) {

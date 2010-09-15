@@ -1,5 +1,5 @@
--- Extens„o de nota fiscal de entrada
--- requer extens„o cadastronf instalada
+-- Extens√£o de nota fiscal de entrada
+-- requer extens√£o cadastronf instalada
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 

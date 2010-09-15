@@ -8,7 +8,7 @@ $cabecalho = $knl_helper->getVar("cabecalho");
 <input type="hidden" name="doc_id" value="<?php echo $documento->get_id();?>">
 <table>
 <tr>
-<td>Destinat·rio:</td>
+<td>Destinat√°rio:</td>
 <td><input type="text" name="destinatario" size="50"></td>
 </tr>
 <tr>

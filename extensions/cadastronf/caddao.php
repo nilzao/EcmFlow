@@ -56,7 +56,7 @@ class knl_extensions_cadastronf_caddao extends knl_lib_daoext_Convert {
        $query = $this->SELECT_BY_CRITERIA." AND razao LIKE '%{$razao}%' ";
        $stmt = $this->conn->query($query);
        
-       $regpag = $stmt->RecordCount()+1; //gato por causa da merda do adodb q não aceita string no bind com LIKE '%?%'
+       $regpag = $stmt->RecordCount()+1; //gato por causa da merda do adodb q nÃ£o aceita string no bind com LIKE '%?%'
        $pagObj = knl_lib_Paginacao::getInstance($stmt->RecordCount(),$stmt->RecordCount(),array('pag'=>0),$regpag);
        $forn = array();
 

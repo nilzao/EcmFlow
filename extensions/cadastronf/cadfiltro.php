@@ -11,7 +11,7 @@ class knl_extensions_cadastronf_cadfiltro extends knl_lib_daoext_Convert {
     }
     
     public function montaFiltro(){
-    	$request = knl_lib_Registry::getRequest();
+    	$request = knl_lib_Registry::getRequestObj();
     	$filtro = array('cnpj'=>$request->getRequest('cnpj'),
     	                'data1'=>$this->data_br_to_mysql($request->getRequest('data1')),
     	                'data2'=>$this->data_br_to_mysql($request->getRequest('data2')));

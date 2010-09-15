@@ -1,5 +1,5 @@
--- Extens„o de cadastro de nota fiscal
--- necess·rio para extensıes nf, pedidos e cotaÁıes
+-- Extens√£o de cadastro de nota fiscal
+-- necess√°rio para extens√µes nf, pedidos e cota√ß√µes
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `d_cad_nf` (
   PRIMARY KEY  (`id`),
   KEY `cnpj` (`cnpj`),
   KEY `razao` (`razao`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `d_cad_nf`
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `d_cotacao_cli` (
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `d_cotacao_cli`

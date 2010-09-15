@@ -12,7 +12,7 @@ class knl_domain_Acesso {
     }
 
   public function handle(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
     switch($request->getGet('action')) {
     	case "formin":
     		$this->formLogin();
@@ -35,7 +35,7 @@ class knl_domain_Acesso {
   }
 
   public function login(){
-  	$request = knl_lib_Registry::getRequest()->getInstance();
+  	$request = knl_lib_Registry::getRequestObj()->getInstance();
 	$usuario = knl_dao_knl_usuario::getInstance()->selectByUserPass($request->getPost('user'),md5($request->getPost('passwd')));
 	
 	if ($usuario->get_id() == 0){

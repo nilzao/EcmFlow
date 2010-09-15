@@ -1,11 +1,11 @@
 <?php
 /**
 * View Helper estatica 
-* carrega com ob_start() o conteudo do arquivo da view no mÈtodo display()
+* carrega com ob_start() o conteudo do arquivo da view no m√©todo display()
 */
 class knl_view_Loader {
 /**
- * instancia da prÛpria helper retornada no metodo getInstance()
+ * instancia da pr√≥pria helper retornada no metodo getInstance()
  * @var objeto
  */
     private static $instance;
@@ -36,7 +36,7 @@ class knl_view_Loader {
         if(isset($this->vars[$name])) {
             return $this->vars[$name];
         } elseif($error) {
-            throw new Exception("Vari·vel $name n„o est· definida!");
+            throw new Exception("Vari√°vel $name n√£o est√° definida!");
         }
     }
     

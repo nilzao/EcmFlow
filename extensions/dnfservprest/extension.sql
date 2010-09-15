@@ -1,5 +1,5 @@
--- Extens„o de nota fiscal de serviÁos prestados
--- requer extens„o cadastronf instalada
+-- Extens√£o de nota fiscal de servi√ßos prestados
+-- requer extens√£o cadastronf instalada
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 

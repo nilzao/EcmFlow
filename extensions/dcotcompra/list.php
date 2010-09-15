@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 $helperLista = knl_view_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
@@ -14,12 +15,12 @@ $lista = $knl_helper->getVar("lista");
 $paginacao = $knl_helper->getVar("paginacao");
 $domainAction = $knl_helper->getVar("domainAction");
 ?>
-  <h1>Cotação de Compra</h1>
+  <h1>CotaÃ§Ã£o de Compra</h1>
 <?php
 $helperPag->monta_Paginacao($paginacao,$domainAction);
 echo $helperPag->html_Paginacao();
 
-$cab = array("Id","Fornecedor","Emissão","Número");
+$cab = array("Id","Fornecedor","EmissÃ£o","NÃºmero");
 $valores = array("get_id"=>"doc","get_nome"=>"dcotcompraFull,d_cotacao_forn","get_data_doc"=>"doc","get_numero"=>"doc");
 //print_r($lista);die();
 $helperLista->monta_Lista($lista,$cab,$valores);

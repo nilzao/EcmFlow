@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `carimbo` (
   `descricao` varchar(50) NOT NULL,
   `cfop` varchar(5) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Extraindo dados da tabela `carimbo`
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `carimbo_cred` (
   KEY `perm_grupo` (`perm_grupo`),
   KEY `id_carimbo` (`id_carimbo`),
   KEY `perm_outros` (`perm_outros`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `carimbo_cred`
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `doc` (
   KEY `id_tipo` (`id_doc_tipo`),
   KEY `id_empresa` (`id_empresa`),
   KEY `id_doc_sub_tipo` (`id_doc_sub_tipo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 PACK_KEYS=1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc`
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `doc_anexo` (
   PRIMARY KEY  (`id`),
   KEY `id_documento1` (`id_doc1`),
   KEY `id_documento2` (`id_doc2`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_anexo`
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `doc_assinatura` (
   KEY `id_usuario` (`id_knl_usuario`),
   KEY `data` (`data_assinatura`),
   KEY `valida` (`valida`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_assinatura`
@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `doc_assinatura_tipo` (
   `id` smallint(2) NOT NULL auto_increment,
   `descricao` varchar(50) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Extraindo dados da tabela `doc_assinatura_tipo`
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `doc_carimbo` (
   PRIMARY KEY  (`id`),
   KEY `id_documento` (`id_doc`),
   KEY `id_carimbo` (`id_carimbo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_carimbo`
@@ -193,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `doc_cred` (
   KEY `perm_grupo` (`perm_grupo`),
   KEY `id_documento` (`id_doc`),
   KEY `perm_outros` (`perm_outros`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_cred`
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `doc_marca_texto` (
   `pag` smallint(4) NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `id_documento` (`id_doc`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_marca_texto`
@@ -239,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `doc_obs` (
   PRIMARY KEY  (`id`),
   KEY `id_documento` (`id_doc`),
   FULLTEXT KEY `obs` (`obs`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_obs`
@@ -263,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `doc_pendencia` (
   KEY `id_doc` (`id_doc`),
   KEY `id_knl_grupo` (`id_knl_grupo`),
   KEY `id_knl_usuario` (`id_knl_usuario`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_pendencia`
@@ -281,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `doc_pendencia_tipo` (
   `descricao` varchar(100) NOT NULL,
   `classe` varchar(50) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Extraindo dados da tabela `doc_pendencia_tipo`
@@ -309,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `doc_sub_tipo` (
   `path` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `path` (`path`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo`
@@ -337,7 +337,7 @@ CREATE TABLE IF NOT EXISTS `doc_sub_tipo_cred` (
   KEY `perm_usuario` (`perm_usuario`),
   KEY `perm_grupo` (`perm_grupo`),
   KEY `perm_outros` (`perm_outros`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_cred`
@@ -363,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `doc_sub_tipo_regra_cred` (
   PRIMARY KEY  (`id`),
   KEY `id_doc_pendencia_tipo` (`id_doc_pendencia_tipo`),
   KEY `id_doc_sub_tipo` (`id_doc_sub_tipo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_regra_cred`
@@ -386,7 +386,7 @@ CREATE TABLE IF NOT EXISTS `doc_sub_tipo_regra_pend` (
   PRIMARY KEY  (`id`),
   KEY `id_doc_pendencia_tipo` (`id_doc_pendencia_tipo`),
   KEY `id_doc_sub_tipo` (`id_doc_sub_tipo`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_sub_tipo_regra_pend`
@@ -406,7 +406,7 @@ CREATE TABLE IF NOT EXISTS `doc_tipo` (
   `ordem` smallint(3) NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `ordem` (`ordem`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_tipo`
@@ -434,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `doc_tipo_cred` (
   KEY `perm_usuario` (`perm_usuario`),
   KEY `perm_grupo` (`perm_grupo`),
   KEY `perm_outros` (`perm_outros`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 PACK_KEYS=0 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `doc_tipo_cred`
@@ -452,7 +452,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `fantasia` varchar(100) NOT NULL,
   `cnpj` varchar(20) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Extraindo dados da tabela `empresa`
@@ -471,7 +471,7 @@ CREATE TABLE IF NOT EXISTS `knl_depto` (
   `id` smallint(6) NOT NULL auto_increment,
   `descricao` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `knl_depto`
@@ -494,7 +494,7 @@ CREATE TABLE IF NOT EXISTS `knl_grupo` (
   `nome` varchar(100) NOT NULL,
   `usuarios` text NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 PACK_KEYS=1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `knl_grupo`
@@ -515,7 +515,7 @@ CREATE TABLE IF NOT EXISTS `knl_grupo_usuario` (
   `id_knl_usuario` int(11) NOT NULL,
   `id_knl_grupo` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Extraindo dados da tabela `knl_grupo_usuario`
@@ -540,7 +540,7 @@ CREATE TABLE IF NOT EXISTS `knl_menu` (
   `domain` varchar(100) NOT NULL,
   `action` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Extraindo dados da tabela `knl_menu`
@@ -574,7 +574,7 @@ CREATE TABLE IF NOT EXISTS `knl_menu_cred` (
   `perm_grupo` smallint(3) NOT NULL,
   `perm_outros` smallint(3) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Extraindo dados da tabela `knl_menu_cred`
@@ -608,7 +608,7 @@ CREATE TABLE IF NOT EXISTS `knl_perm_bin` (
   `permbin` smallint(3) NOT NULL,
   `descricao` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Extraindo dados da tabela `knl_perm_bin`
@@ -643,7 +643,7 @@ CREATE TABLE IF NOT EXISTS `knl_usuario` (
   `passwdauth2` int(11) NOT NULL,
   `passwdauth3` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `knl_usuario`
