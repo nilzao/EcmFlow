@@ -1,7 +1,7 @@
 #!/bin/bash
 caminho="/docinput/"
-dir_install="/www/ecmflow"
-cd $dir_install
+dir_install="/paginas/ecmflow_git/"
+#cd $dir_install
 while [ true ]; do
  totaljpg=$(find $caminho -iname "*.jpg" | grep -m 1 -ic .jpg)
  if [ $totaljpg == 1 ]; then
@@ -18,10 +18,10 @@ while [ true ]; do
     done;
     echo $imagickargs| xargs convert;
 
-    phpargs="index.php Shell newDoc 1 $o 1";
+    phpargs=$dir_install"index.php Shell newDoc 1 $o 1";
     id_doc=$(echo $phpargs | xargs php);
     
-    phpargs="index.php Shell addPag $id_doc $o 1 ";
+    phpargs=$dir_install"index.php Shell addPag $id_doc $o 1 ";
 #para depurar:
 #    echo $phpargs;
     echo $phpargs | xargs php;
@@ -53,16 +53,15 @@ while [ true ]; do
     
     cd $dir_install
     
-    phpargs="index.php Shell newDoc 1 $o $totalpag";
+    phpargs=$dir_install"index.php Shell newDoc 1 $o $totalpag";
 
     id_doc=$(echo $phpargs | xargs php);
      
     for opag in $(find $caminho"tmp/" -iname "*.jpg"); do
-      phpargs="index.php Shell addPag $id_doc $opag ";
+      phpargs=$dir_install"index.php Shell addPag $id_doc $opag ";
       echo $phpargs | xargs php;
       echo $opag | xargs rm -rf;
     done
   fi
  sleep 1
 done
-

@@ -1,5 +1,4 @@
 <?php
-
 class knl_domain_Shell {
 	private static $instance;
 
@@ -12,6 +11,8 @@ class knl_domain_Shell {
     }
     
     public function handle(){
+    	
+    	
     	$shell = knl_lib_Registry::getShellArgs();
     	switch($shell->getShellArg(2)){
     		case "newDoc" :
@@ -112,7 +113,8 @@ class knl_domain_Shell {
     	 * arg 4: /path_completo/nome_do_arquivo.jpg gerado pelo imagemagick
     	 * arg 5: vazio, 1 se for jpg direto sem numero de paginas
     	 */
-    	$path_sistema = "/paginas/docs/img/doc/";
+    	$path_sistema = str_replace("index.php","",$_SERVER["SCRIPT_FILENAME"])."img/doc/";
+    	
     	$shell = knl_lib_Registry::getShellArgs();
     	$onde_ini = strrpos($shell->getShellArg(4), '-')+1;
 		$onde_fim = strpos($shell->getShellArg(4), ".")-$onde_ini;

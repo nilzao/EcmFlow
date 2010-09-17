@@ -15,10 +15,9 @@ Para instalar:
 - Descompactar o tar.gz no diretório desejado.
 - Criar o banco de dados no mysql, usuário, senha e permissões.
 - Importar o arquivo ecmflow_clean.slq para o banco de dados criado.
-- Editar o arquivo lib/DataBase.php e definir nome de de usuário, senha,
+- Editar o arquivo lib/Config.php e definir nome de de usuário, senha,
   endereço do servidor mysql e nome do banco de dados.
 - Editar o arquivo scandoc.sh, definir as variaveis "caminho" e
   "dir_install". - Criar o diretório definido na variavel "caminho", este
   diretório é a entrada de novos documentos, formato pdf ou jpg.
 - Criar o subdiretório tmp $caminho/tmp.
-
