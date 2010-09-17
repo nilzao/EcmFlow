@@ -8,7 +8,7 @@ class knl_lib_DataBase {
 			$dbuser = knl_lib_Config::getInstance()->get_dbuser();
 			$dbpassword = knl_lib_Config::getInstance()->get_dbpassword();
 			$dbname = knl_lib_Config::getInstance()->get_dbname();
-			self::$conn = NewADOConnection('mysqli');
+			self::$conn = NewADOConnection(knl_lib_Config::getInstance()->get_dbdriver());
 			self::$conn->Connect($dbhost,$dbuser,$dbpassword,$dbname);
 			self::$conn->EXECUTE("set names 'utf8'");
 			self::$conn->debug = knl_lib_Config::getInstance()->get_dbdebug();
