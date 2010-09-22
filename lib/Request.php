@@ -1,6 +1,5 @@
 <?php
-
-class knl_lib_Request extends knl_lib_Registry {
+class knl_lib_Request {
     private static $instance;
 
     private function __construct(){}

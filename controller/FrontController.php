@@ -40,6 +40,9 @@ class knl_controller_FrontController {
             case "Empresa":
                 knl_domain_Empresa::getInstance()->handle();
             break;
+            case "Extension":
+                knl_domain_Extension::getInstance()->handle();
+            break;
             case "Shell":
             	if (empty($shellArg1)){throw new Exception("Domain Shell somente acessivel no console do host");}
                 knl_domain_Shell::getInstance()->handle();

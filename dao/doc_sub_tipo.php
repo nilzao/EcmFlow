@@ -96,14 +96,14 @@ class knl_dao_doc_sub_tipo {
 
     public function upsert(knl_model_doc_sub_tipo $objmodel){
        if ($objmodel->get_id() == 0){
-          $query = "INSERT INTO doc_sub_tipo (id_doc_tipo,descricao,str_shell)
-                    VALUES ('".$objmodel->get_id_doc_tipo()."','".$objmodel->get_descricao()."','".$objmodel->get_str_shell()."')";
+          $query = "INSERT INTO doc_sub_tipo (id_doc_tipo,descricao,str_shell,path)
+                    VALUES ('".$objmodel->get_id_doc_tipo()."','".$objmodel->get_descricao()."','".$objmodel->get_str_shell()."','".$objmodel->get_path()."')";
           $stmt = $this->conn->prepare($query);
           $stmt = $this->conn->execute($stmt);
           $objmodel->set_id($this->conn->Insert_ID());
        } else {
             $query = "UPDATE doc_sub_tipo SET 
-                      id_doc_tipo='{$objmodel->get_id_doc_tipo()}',descricao='{$objmodel->get_descricao()}',str_shell='{$objmodel->get_str_shell()}'
+                      id_doc_tipo='{$objmodel->get_id_doc_tipo()}',descricao='{$objmodel->get_descricao()}',str_shell='{$objmodel->get_str_shell()}',path='{$objmodel->get_path()}
                       WHERE id = ?";
             $stmt = $this->conn->prepare($query);
             $stmt = $this->conn->execute($stmt,$objmodel->get_id());
