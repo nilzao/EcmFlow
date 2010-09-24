@@ -37,7 +37,6 @@ class knl_dao_doc {
     }
     
     public function selectListagem($id_usuario,$id_grupo,$arrayGrupos,$arrayFiltro) {
-    	//$this->conn->debug = true;
     	/* mandar $id_usuario, $id_grupo, $arrayGrupos e $arrayFiltro
     	 *  para o criteria
     	 * criteria deve aplicar permissoes na montagem da query
@@ -75,7 +74,6 @@ class knl_dao_doc {
        return $lista;
     }
     
-
     public function selectByCriteria(knl_lib_criteria $objcriteria) {
        $this->SELECT_BY_CRITERIA .= "$objcriteria->get_sql()";
     }

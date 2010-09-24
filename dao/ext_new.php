@@ -42,15 +42,16 @@ class knl_dao_ext_new {
     		$stmt = $this->conn->prepare($query);
 	        //$stmt = $this->conn->execute($stmt,$array_bind);
         	$stmt = $this->conn->execute($stmt); //fixme @adodbphp sqlinjection
-        	
         	if (!empty($array_inputs[$k])){
-	        	$query_ins = "INSERT INTO $k (";
-	        	$query_ins .= implode(",",array_flip($array_inputs[$k]));
-	        	$query_ins .= ") VALUES (";
-	        	$query_ins .= implode(",",$array_inputs[$k]);
-	        	$query_ins .= ")";
-	        	$stmt = $this->conn->prepare($query_ins);
-        		$stmt = $this->conn->execute($stmt); //fixme @adodbphp sqlinjection
+        		foreach($array_inputs[$k] as $array_inp){
+		        	$query_ins = "INSERT INTO $k (";
+		        	$query_ins .= implode(",",array_keys($array_inp));
+		        	$query_ins .= ") VALUES ('";
+		        	$query_ins .= implode("','",$array_inp);
+		        	$query_ins .= "')";
+		        	$stmt = $this->conn->prepare($query_ins);
+	        		$stmt = $this->conn->execute($stmt); //fixme @adodbphp sqlinjection
+        		}
         	}
         	
         	

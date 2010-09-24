@@ -31,7 +31,7 @@ class knl_domain_Extension {
 	    	//$ext_field['name'];
 	    	//$ext_field['size'];
 			$ext_field['tmp_name'];
-			$str_to_path = "tmp";
+			$str_to_path = "";
 		    $zip_file = zip_open($ext_field['tmp_name']);
 		    while ($zip_read = zip_read($zip_file)) {
 		    	//echo zip_entry_name($zip_read);echo "<br>";
@@ -40,17 +40,26 @@ class knl_domain_Extension {
 		    		$xml_cfg = new DOMDocument();
 					$xml_cfg->loadXML($buf);
 					$conf = $this->xml_read_cfg($xml_cfg);
+					$conf_full[] = $conf;
 					$str_to_path = $conf['extension'];
 					knl_dao_ext_new::getInstance()->createExtension($conf);
 		    	}
+		    	if (zip_entry_name($zip_read) == "config_aux.xml"){
+		    		$buf = zip_entry_read($zip_read, zip_entry_filesize($zip_read));
+		    		$xml_cfg = new DOMDocument();
+					$xml_cfg->loadXML($buf);
+					$conf = $this->xml_read_cfg($xml_cfg);
+					$conf_full[] = $conf;
+					knl_dao_ext_new::getInstance()->createExtension($conf);
+		    	}
 		    }
-		    if($conf['extension_type']!='aux'){
+		    if(!empty($str_to_path)){
 				$zip_file = zip_open($ext_field['tmp_name']);
 			    $this->unzip_extension($zip_file,$str_to_path);
 			}
 	    }
 	    echo "Fim da instalação<br>\n<pre>";
-	    print_r($conf);
+	    print_r($conf_full);
 	}
 	
 	private function xml_read_cfg($xml){
@@ -93,6 +102,7 @@ class knl_domain_Extension {
 		$key_tabela = $xml->getElementsByTagName('key_tabela');
 		for ($i=0;$i<$key_tabela->length;$i++){
 			$tabela = $key_tabela->item($i)->parentNode->attributes->getNamedItem("nome")->nodeValue;
+			$cp_array[$tabela]=array();
 			$campos = $key_tabela->item($i)->childNodes;
 			for($io=0;$io<$campos->length;$io++){
 				if($campos->item($io)->hasChildNodes()){
@@ -110,26 +120,29 @@ class knl_domain_Extension {
 		for ($i=0;$i<$input_tabela->length;$i++){
 			$tabela = $input_tabela->item($i)->parentNode->attributes->getNamedItem("nome")->nodeValue;
 			$campos = $input_tabela->item($i)->childNodes;
-			$cp_array[$tabela] = array();
+			$inpt_array_tmp = array();
 			for($io=0;$io<$campos->length;$io++){
 				if($campos->item($io)->hasChildNodes()){
 					$cp_name = $campos->item($io)->attributes->getNamedItem("campo")->nodeValue;
 					$cp_value = $campos->item($io)->nodeValue;
-					$cp_array[$tabela][$cp_name] = $cp_value;
+					$inpt_array_tmp[$cp_name] = $cp_value;
 				}
 			}
+			$cp_array[$tabela][] = $inpt_array_tmp;
 		}
 		return $cp_array;
 	}
 	
 	private function unzip_extension ($zip_file,$str_to_path){
 		$str_to_path = "extensions/".$str_to_path;
-		mkdir($str_to_path);
+    	mkdir($str_to_path);
 		while ($zip_read = zip_read($zip_file)) {
-	    	$fp = fopen($str_to_path."/".zip_entry_name($zip_read), "w");
-	    	$buf = zip_entry_read($zip_read, zip_entry_filesize($zip_read));
-	    	fwrite($fp,"$buf");
-	    	fclose($fp);
+			if (zip_entry_name($zip_read) != "config.xml" AND zip_entry_name($zip_read) != "config_aux.xml"){
+		    	$fp = fopen($str_to_path."/".zip_entry_name($zip_read), "w");
+		    	$buf = zip_entry_read($zip_read, zip_entry_filesize($zip_read));
+		    	fwrite($fp,"$buf");
+		    	fclose($fp);
+			}
 	    }
 	}
 }
