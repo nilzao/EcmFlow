@@ -9,7 +9,7 @@
   <script language="JavaScript" type="text/javascript" src="./view/js/jquery.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-	  setInterval(ver_pendencia, 60000);
+	  setInterval(ver_pendencia, 600000);
   });
   
 function ver_pendencia(){

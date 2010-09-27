@@ -52,9 +52,10 @@ while [ true ]; do
     totalpag=$(find $caminho"tmp/" -iname "*.jpg" | grep -ic .jpg);
     
     cd $dir_install
-    
-    phpargs=$dir_install"index.php Shell newDoc 1 $o $totalpag";
 
+    phpargs=$dir_install"index.php Shell newDoc 1 $o $totalpag";
+# depurar
+#echo $phpargs    
     id_doc=$(echo $phpargs | xargs php);
      
     for opag in $(find $caminho"tmp/" -iname "*.jpg"); do

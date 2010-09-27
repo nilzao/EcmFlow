@@ -12,7 +12,7 @@ class knl_extensions_dpedcompra_shell {
     
 	public function gravaNoBanco($valores) {
 		//print_r($valores);
-    	$newmDocH = new knl_extensions_dpedcompra_model(0,$valores['id_doc'],0);
+    	$newmDocH = new knl_extensions_dpedcompra_model(0,$valores['id_doc'],-1);
     	$newDocH = knl_extensions_dpedcompra_dao::getInstance();
     	$newDocH->upsert($newmDocH);
     }

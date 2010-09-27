@@ -114,7 +114,7 @@ class knl_domain_Shell {
     	 * arg 5: vazio, 1 se for jpg direto sem numero de paginas
     	 */
     	$path_sistema = str_replace("index.php","",$_SERVER["SCRIPT_FILENAME"])."img/doc/";
-    	
+    	//echo $path_sistema;
     	$shell = knl_lib_Registry::getShellArgs();
     	$onde_ini = strrpos($shell->getShellArg(4), '-')+1;
 		$onde_fim = strpos($shell->getShellArg(4), ".")-$onde_ini;
@@ -123,7 +123,7 @@ class knl_domain_Shell {
     		$num_pag = substr($shell->getShellArg(4),$onde_ini,$onde_fim)+1;	
     	}
     	copy($shell->getShellArg(4),$path_sistema.$shell->getShellArg(3)."_".$num_pag.".jpg");
-    	
+
     	/* adaptação para pedVendas que vem do fs... implementar outra solução que venha do banco com angulo do subtipo*/
     	//$Doc = knl_dao_doc::getinstance();
     	//$mDoc= $Doc->selectById($shell->getShellArg(3));

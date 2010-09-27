@@ -1,5 +1,5 @@
 <?php	
-error_reporting(E_ALL | E_STRICT);
+//error_reporting(E_ALL | E_STRICT);
 function __autoload($class_name) {
     if(substr($class_name,0,4)=='knl_') {
     	if (substr($class_name,0,7)=='knl_dao') {$location = "dao/".substr($class_name,8).".php";}
