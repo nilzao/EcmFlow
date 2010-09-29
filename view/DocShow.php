@@ -338,7 +338,7 @@ function load_div(html){
   <div class="divbox" id="divbox"><iframe class="iframebox" id="iframebox"></iframe>
   <table width="100%" border="0" id="tb_close"><tr><td align="right"><a style="background-color:#000000;color:#FFFFFF;" onclick="iframeClose();"><strong>Fechar</strong></a></td></tr></table>
    </div>
- </div><div id="div_ferramentas"><input type="button" onclick="add_caneta();" value="Add">
+ </div><div id="div_ferramentas"><input type="button" onclick="get_canetas();add_caneta();" value="Add">
  <br><input type="button" onclick="get_canetas();" value="Show"><br>
  <input type="button" onclick="toggle_regua();" value="Régua"><br><br>
  <div id="lixeira_caneta">DEL</div>
