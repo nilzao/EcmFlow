@@ -27,7 +27,7 @@ class knl_domain_Extension {
 	public function ExtUpload(){
 		$files = knl_lib_Registry::getFiles();
 		$ext_field = $files->getFile('ext_field');
-	    if($ext_field['error'] == 0 and $ext_field['type']=='application/octet-stream'){
+	    if($ext_field['error'] == 0){
 	    	//$ext_field['name'];
 	    	//$ext_field['size'];
 			$ext_field['tmp_name'];
