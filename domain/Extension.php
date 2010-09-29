@@ -135,15 +135,17 @@ class knl_domain_Extension {
 	
 	private function unzip_extension ($zip_file,$str_to_path){
 		$str_to_path = "extensions/".$str_to_path;
-    	mkdir($str_to_path);
-		while ($zip_read = zip_read($zip_file)) {
-			if (zip_entry_name($zip_read) != "config.xml" AND zip_entry_name($zip_read) != "config_aux.xml"){
-		    	$fp = fopen($str_to_path."/".zip_entry_name($zip_read), "w");
-		    	$buf = zip_entry_read($zip_read, zip_entry_filesize($zip_read));
-		    	fwrite($fp,"$buf");
-		    	fclose($fp);
-			}
-	    }
+    	if(!is_dir($str_to_path)){
+			mkdir($str_to_path);
+			while ($zip_read = zip_read($zip_file)) {
+				if (zip_entry_name($zip_read) != "config.xml" AND zip_entry_name($zip_read) != "config_aux.xml"){
+			    	$fp = fopen($str_to_path."/".zip_entry_name($zip_read), "w");
+			    	$buf = zip_entry_read($zip_read, zip_entry_filesize($zip_read));
+			    	fwrite($fp,"$buf");
+			    	fclose($fp);
+				}
+	    	}
+    	}
 	}
 }
 ?>
