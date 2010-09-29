@@ -30,7 +30,7 @@ class knl_domain_Extension {
 	    if($ext_field['error'] == 0){
 	    	//$ext_field['name'];
 	    	//$ext_field['size'];
-			$ext_field['tmp_name'];
+			//$ext_field['tmp_name'];
 			$str_to_path = "";
 		    $zip_file = zip_open($ext_field['tmp_name']);
 		    while ($zip_read = zip_read($zip_file)) {

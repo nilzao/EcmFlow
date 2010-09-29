@@ -14,7 +14,8 @@ class knl_lib_daoext_Convert {
   public function data_mysql_to_br($data,$divisao = "/") {
   	if (!empty($data)){
   		if ($data != "0000-00-00"){
-  			$data = new DateTime($data);
+  			$timezone = new DateTimeZone(knl_lib_Config::getInstance()->get_timezone());
+  			$data = new DateTime($data,$timezone);
   		    $data = $data->format("d{$divisao}m{$divisao}Y");
   		} else {
   			list($ano,$mes,$dia) = split('[/.-]',$data);
@@ -27,7 +28,8 @@ class knl_lib_daoext_Convert {
   public function datatime_mysql_to_br($data) {
   	if (!empty($data)){
   		if ($data != "0000-00-00 00:00:00"){
-  			$data = new DateTime($data);
+  			$timezone = new DateTimeZone(knl_lib_Config::getInstance()->get_timezone());
+  			$data = new DateTime($data,$timezone);
   		    $data = $data->format("d/m/Y  H:i:s");
   		}
    	}
@@ -45,7 +47,8 @@ class knl_lib_daoext_Convert {
   public function datatime_br_to_mysql($data) {
   	if (!empty($data)){
   		if ($data != "00-00-0000 00:00:00"){
-  			$data = new DateTime($data);
+  			$timezone = new DateTimeZone(knl_lib_Config::getInstance()->get_timezone());
+  			$data = new DateTime($data,$timezone);
   		    $data = $data->format("Y-m-d H:i:s");
   		    echo $data;die();
   		}
