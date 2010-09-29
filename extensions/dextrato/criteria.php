@@ -18,6 +18,7 @@ class knl_extensions_dextrato_criteria extends knl_lib_daoext_Convert {
 	}
 	
 	public function montaSql($arrayFiltro){
+		$this->arrayFiltroOut = $arrayFiltro;
 		$this->sql = "";
 		$this->innerJoin .= " LEFT JOIN d_extrato ON (tb.id = d_extrato.id_doc) ";
 	  	$this->innerJoin .= " LEFT JOIN d_extrato_conta ec ON (ec.id = d_extrato.id_conta) ";

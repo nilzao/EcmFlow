@@ -18,6 +18,7 @@ class knl_extensions_dnfentrada_criteria extends knl_lib_daoext_Convert {
 	}
 	
 	public function montaSql($arrayFiltro){
+		$this->arrayFiltroOut = $arrayFiltro;
 		$this->sql = "";
 		$this->innerJoin = " LEFT JOIN d_nf_entrada nfe ON (tb.id = nfe.id_doc) ";
 	    $this->innerJoin .= " LEFT JOIN d_cad_nf nfeforn ON (nfeforn.id = nfe.id_fornecedor) ";
@@ -25,12 +26,12 @@ class knl_extensions_dnfentrada_criteria extends knl_lib_daoext_Convert {
 	  	if (!empty($arrayFiltro['data2'])){
 	  	   $this->sql .= " AND nfe.dataent <= ? ";
 	  	   $this->ArrayBind[] = $arrayFiltro['data2'];
-		   $this->arrayFiltroOut['data2'] = $this->data_mysql_to_br($this->arrayFiltroOut['data2'],"-");
+	  	   $this->arrayFiltroOut['data2'] = $this->data_mysql_to_br($this->arrayFiltroOut['data2'],"-");
 	    }
 	  	if (!empty($arrayFiltro['data1'])){
 	  	   $this->sql .= " AND nfe.dataent >= ? ";
 	  	   $this->ArrayBind[] = $arrayFiltro['data1'];
-		   $this->arrayFiltroOut['data1'] = $this->data_mysql_to_br($this->arrayFiltroOut['data1'],"-");
+	  	   $this->arrayFiltroOut['data1'] = $this->data_mysql_to_br($this->arrayFiltroOut['data1'],"-");
 	    }
 	    if (!empty($arrayFiltro['cnpj'])){
 	    	$this->sql .= " AND nfeforn.cnpj = ? ";

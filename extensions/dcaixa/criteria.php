@@ -18,6 +18,7 @@ class knl_extensions_dcaixa_criteria extends knl_lib_daoext_Convert {
 	}
 	
 	public function montaSql($arrayFiltro){
+		$this->arrayFiltroOut = $arrayFiltro;
 		$this->sql = "";
 		$this->innerJoin .= " LEFT JOIN d_caixa ON (tb.id = d_caixa.id_doc) ";
 		$this->orderBy = array("d_caixa.data_ini","tb.numero");
