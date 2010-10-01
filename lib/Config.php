@@ -7,6 +7,7 @@ class knl_lib_Config {
 	private $dbname;
 	private $dbdebug;
 	private $dbdriver;
+	private $timezone;
 	
 	private function __construct(){}
 	
@@ -17,9 +18,11 @@ class knl_lib_Config {
 	  	self::$instance->dbhost = "localhost";
 		self::$instance->dbuser = "root";
 		self::$instance->dbpassword = "";
-		self::$instance->dbname = "ecmflow";
+		self::$instance->dbname = "ecmflow_install";
 		self::$instance->dbdebug = false;
 		self::$instance->dbdriver = 'mysqli';
+		self::$instance->timezone = 'America/Sao_Paulo';
+		date_default_timezone_set(self::$instance->timezone);
 	  	return self::$instance;
 	}
 	
@@ -45,6 +48,10 @@ class knl_lib_Config {
 	
 	public function get_dbdriver(){
 		return $this->dbdriver;
+	}
+	
+	public function get_timezone(){
+		return $this->timezone;
 	}
 }
 ?>
