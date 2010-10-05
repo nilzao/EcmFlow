@@ -16,12 +16,12 @@ class knl_extensions_dctapagar_edit extends knl_lib_daoext_Convert {
 
   	$forn = knl_extensions_cadastronf_cadedit::getInstance()->gravaNoBanco();
  	
-  	$NfEntrada = knl_extensions_dnfentrada_dao::getInstance();
-  	$mNfEntrada = $NfEntrada->selectByIdDoc($request->getpost('id'));
-  	    $mNfEntrada->set_dataent($this->data_br_to_mysql($request->getpost('dataent')));
-  	    $mNfEntrada->set_id_fornecedor($forn->get_id());
+  	$CtaPagar = knl_extensions_dctapagar_dao::getInstance();
+  	$mCtaPagar = $CtaPagar->selectByIdDoc($request->getpost('id'));
+  	    $mCtaPagar->set_data_vencimento($this->data_br_to_mysql($request->getpost('data_vencimento')));
+  	    $mCtaPagar->set_id_fornecedor($forn->get_id());
   	    
-  	$NfEntrada->upsert($mNfEntrada);
+  	$CtaPagar->upsert($mCtaPagar);
   }
 }
 ?>

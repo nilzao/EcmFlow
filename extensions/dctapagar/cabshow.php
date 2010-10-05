@@ -1,28 +1,29 @@
 <?php
-$nfentrada = $knl_helper->getVar('cabecalho');
-$nfentrada = $knl_helper->getVar('cabecalho');
+$ctapagar = $knl_helper->getVar('cabecalho');
+$ctapagar = $knl_helper->getVar('cabecalho');
 $helperShowDiv = knl_view_hlp_ShowDiv::getInstance();
 
 $htmldiv = "<div id=\"docH\">";
 $helperShowDiv->set_html_Div($htmldiv);
-$vars['d_nf_entrada_title;Documento:'] = "Nota fiscal de entrada";
-$vars['d_nf_entrada;Data de entrada:'] = $nfentrada['dnfentrada']->get_dataent();
-$vars['d_nf_entradaFull_forn_cnpj;Cnpj:'] = $nfentrada['dnfentradaFull']['forn']->get_cnpj();
-$vars['d_nf_entradaFull_forn_razao;Razão social:'] = $nfentrada['dnfentradaFull']['forn']->get_razao();
-$vars['d_nf_entradaFull_forn_ie;Inscrição estadual:'] = $nfentrada['dnfentradaFull']['forn']->get_ie();
-$vars['d_nf_entradaFull_forn_estado;Estado:'] = $nfentrada['dnfentradaFull']['forn']->get_estado();
-
-$select = "<select id=\"d_nf_entradaFull_carimbos_combo\" size=\"3\">\n";
-foreach ($nfentrada['dnfentradaFull']['carimbos'] as $v){
+$vars['d_cta_pagar_title;Documento:'] = "Nota fiscal de entrada";
+$vars['d_cta_pagar;Data vencimento:'] = $ctapagar['dctapagar']->get_data_vencimento();
+$vars['d_cta_pagarFull_forn_cnpj;Cnpj:'] = $ctapagar['dctapagarFull']['forn']->get_cnpj();
+$vars['d_cta_pagarFull_forn_razao;Razão social:'] = $ctapagar['dctapagarFull']['forn']->get_razao();
+$vars['d_cta_pagarFull_forn_ie;Inscrição estadual:'] = $ctapagar['dctapagarFull']['forn']->get_ie();
+$vars['d_cta_pagarFull_forn_estado;Estado:'] = $ctapagar['dctapagarFull']['forn']->get_estado();
+/*	
+$select = "<select id=\"d_cta_pagarFull_carimbos_combo\" size=\"3\">\n";
+foreach ($ctapagar['dctapagarFull']['carimbos'] as $v){
 	$select .= "<option>{$v['carimbo']->get_descricao()}</option>\n";
 }
 $select .= "</select>\n";
-$vars['d_nf_entradaFull_carimbos;Classificações:'] = $select;
+$vars['d_cta_pagarFull_carimbos;Classificações:'] = $select;
+*/
 
 $helperShowDiv->monta_Div($vars);
 $htmldiv = "</div>";
 $helperShowDiv->set_html_Div($htmldiv);
-$css = "<link rel=\"stylesheet\" href=\"extensions/dnfentrada/cabshow.css\" type=\"text/css\">";
+$css = "<link rel=\"stylesheet\" href=\"extensions/dctapagar/cabshow.css\" type=\"text/css\">";
 $helperShowDiv->set_css_Div($css);
-//print_r($nfentrada);die();
+//print_r($ctapagar);die();
 ?>

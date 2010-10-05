@@ -21,7 +21,7 @@ $helperPag->monta_Paginacao($paginacao,$domainAction);
 echo $helperPag->html_Paginacao();
 
 $cab = array("Id","Razão Social","Vencimento","Emissão","Número");
-$valores = array("get_id"=>"doc","get_razao"=>"dnfentradaFull,forn","get_data_vencimento"=>"dctapagar","get_data_doc"=>"doc","get_numero"=>"doc");
+$valores = array("get_id"=>"doc","get_razao"=>"dctapagarFull,forn","get_data_vencimento"=>"dctapagar","get_data_doc"=>"doc","get_numero"=>"doc");
 //print_r($lista);die();
 $helperLista->monta_Lista($lista,$cab,$valores);
 echo $helperLista->html_Lista();

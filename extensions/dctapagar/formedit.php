@@ -1,16 +1,16 @@
 <?php
 $helperFormEdit = knl_view_hlp_FormEdit::getInstance();
-$nfentrada = $knl_helper->getVar('cabecalho');
-$fornecedor = $nfentrada['dnfentradaFull']['forn'];
+$ctapagar = $knl_helper->getVar('cabecalho');
+$fornecedor = $ctapagar['dctapagarFull']['forn'];
 $knl_helper->setVar("head","<script type=\"text/javascript\" src=\"./extensions/cadastronf/cadcnpj.js\"></script>\n");
-$helperFormEdit->monta_CampoData($nfentrada['dnfentrada']->get_dataent(),"dataent");
-//print_r($nfentrada);die();
+$helperFormEdit->monta_CampoData($ctapagar['dctapagar']->get_data_vencimento(),"data_vencimento");
+//print_r($ctapagar);die();
 $carimbos = $knl_helper->getVar('carimbos');
 $docCarimbos = $knl_helper->getVar('docCarimbo');
 $helperFormEdit->monta_Carimbo($carimbos,$docCarimbos);
 
 ?>
-<td>Data Entrada: </td><td><?php echo $helperFormEdit->html_CampoData('dataent'); ?></td>
+<td>Data Vencimento: </td><td><?php echo $helperFormEdit->html_CampoData('data_vencimento'); ?></td>
 <?php
 $vl = knl_view_Loader::getInstance();
     	$vl->setVar('fornecedor',$fornecedor);
@@ -18,7 +18,3 @@ $vl = knl_view_Loader::getInstance();
 echo $vl->display('cadastronf/cadeditcnpjform',false,true);
 echo $vl->display("cadastronf/cadeditform",false,true);
 ?>
-<td>Carimbo: </td><td colspan="3">
-<?php echo $helperFormEdit->html_Carimbo();?>
-</td>
-

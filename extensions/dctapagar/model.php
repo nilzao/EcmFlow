@@ -39,12 +39,12 @@ class knl_extensions_dctapagar_model extends knl_lib_daoext_Convert {
      }
 
      public function get_data_vencimento_db() {
-        return $this->dataent;
+        return $this->data_vencimento;
      }
 
      public function get_data_vencimento() {
-        $this->dataent = $this->data_mysql_to_br($this->dataent);
-        return $this->dataent;
+        $this->data_vencimento = $this->data_mysql_to_br($this->data_vencimento);
+        return $this->data_vencimento;
      }
 
      // set functions:
