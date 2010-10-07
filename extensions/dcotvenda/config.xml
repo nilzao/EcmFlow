@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dcotvenda" type="doc">
+ <tabela nome="d_cot_venda">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_fornecedor</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_fornecedor</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Cotação de Venda" />
+ <doc_sub_tipo nome="Cotação de Venda" path="/docinput/comercial/Cotacao" />
+</ecmflow_extension>

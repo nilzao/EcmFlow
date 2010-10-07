@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dpedvenda" type="aux">
+ <tabela nome="d_ped_venda_entrega">
+  <head_tabela>
+   <campo type="int(11)">id_ped_venda</campo>
+   <campo type="date">dataentrega</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_ped_venda</indice>
+   <indice>dataentrega</indice>
+  </key_tabela>
+ </tabela> 
+</ecmflow_extension>

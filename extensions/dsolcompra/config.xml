@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dsolcompra" type="doc">
+ <tabela nome="d_sol_compra">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Solicitação de Compra" />
+ <doc_sub_tipo nome="Solicitação de Compra" path="/docinput/compras/Solicitacao" />
+</ecmflow_extension>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dnfentrada" type="doc">
+ <tabela nome="d_nf_entrada">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_fornecedor</campo>
+   <campo type="date">dataent</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_fornecedor</indice>
+   <indice>dataent</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Nf de Entrada" />
+ <doc_sub_tipo nome="Nf de Entrada Compra" path="/docinput/almox/NfCompra" />
+</ecmflow_extension>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dextrato" type="aux">
+ <tabela nome="d_extrato_agencia">
+  <head_tabela>
+   <campo type="smallint(6)">id_banco</campo>
+   <campo type="varchar(20)">numero</campo>
+   <campo type="varchar(50)">descricao</campo>
+   <campo type="varchar(20)">telefone</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_banco</indice>
+   <indice>numero</indice>
+  </key_tabela>
+  <input_tabela>
+   <input campo="id">-1</input>
+   <input campo="id_banco">-1</input>
+  </input_tabela>
+  <input_tabela>
+   <input campo="id">1</input>
+   <input campo="id_banco">1</input>
+   <input campo="numero">1234-5</input>
+   <input campo="descricao">Agencia de Itaquaquecetuba do Norte</input>
+  </input_tabela>
+ </tabela>
+ <tabela nome="d_extrato_banco">
+  <head_tabela>
+   <campo type="varchar(10)">numero</campo>
+   <campo type="varchar(50)">nome</campo>
+  </head_tabela>
+  <key_tabela>
+  </key_tabela>
+  <input_tabela>
+   <input campo="id">-1</input>
+  </input_tabela>
+  <input_tabela>
+   <input campo="id">1</input>
+   <input campo="numero">839</input>
+   <input campo="nome">Banqueiros S.A.</input>
+  </input_tabela>
+ </tabela>
+ <tabela nome="d_extrato_conta">
+  <head_tabela>
+   <campo type="smallint(6)">id_agencia</campo>
+   <campo type="varchar(20)">numero</campo>
+   <campo type="varchar(50)">obs</campo>
+   <campo type="smallint(6)">id_empresa</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_agencia</indice>
+   <indice>id_empresa</indice>
+  </key_tabela>
+  <input_tabela>
+   <input campo="id">-1</input>
+   <input campo="id_agencia">-1</input>
+   <input campo="id_empresa">1</input>
+  </input_tabela>
+  <input_tabela>
+   <input campo="id">1</input>
+   <input campo="id_agencia">1</input>
+   <input campo="numero">123456-X</input>
+   <input campo="obs">Conta Oficial da Empresa Ficticia</input>
+   <input campo="id_empresa">1</input>
+  </input_tabela>
+ </tabela>
+</ecmflow_extension>

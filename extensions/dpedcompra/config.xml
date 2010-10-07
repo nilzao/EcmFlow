@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dpedcompra" type="doc">
+ <tabela nome="d_ped_compra">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_fornecedor</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_fornecedor</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Pedido de Compra" />
+ <doc_sub_tipo nome="Pedido de Compra" path="/docinput/compras/Pedido" />
+</ecmflow_extension>

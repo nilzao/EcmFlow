@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="cadastronf" type="cad">
+ <tabela nome="d_cad_nf">
+  <head_tabela>
+   <campo type="varchar(18)">cnpj</campo>
+   <campo type="varchar(100)">razao</campo>
+   <campo type="varchar(2)">estado</campo>
+   <campo type="varchar(40)">ie</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>cnpj</indice>
+   <indice>razao</indice>
+  </key_tabela>
+  <input_tabela>
+   <input campo="id">-1</input>
+  </input_tabela>
+ </tabela>
+ <tabela nome="d_cotacao_cli">
+  <head_tabela>
+   <campo type="varchar(100)">nome</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>nome</indice>
+  </key_tabela>
+  <input_tabela>
+   <input campo="id">-1</input>
+  </input_tabela>
+ </tabela>
+</ecmflow_extension>

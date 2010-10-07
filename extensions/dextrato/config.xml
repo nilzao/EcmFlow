@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dextrato" type="doc">
+ <tabela nome="d_extrato">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_conta</campo>
+   <campo type="date">data_ini</campo>
+   <campo type="date">data_fim</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_conta</indice>
+   <indice>data_ini</indice>
+   <indice>data_fim</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Extrato" />
+ <doc_sub_tipo nome="Extrato" path="/docinput/financeiro/Extrato" />
+</ecmflow_extension>

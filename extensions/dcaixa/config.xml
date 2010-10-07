@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dcaixa" type="doc">
+ <tabela nome="d_caixa">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="date">data_ini</campo>
+   <campo type="date">data_fim</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>data_ini</indice>
+   <indice>data_fim</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Caixa" />
+ <doc_sub_tipo nome="Caixa Financeiro" path="/docinput/financeiro/Caixa" />
+</ecmflow_extension>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dnfservprest" type="doc">
+ <tabela nome="d_nf_serv_prest">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_fornecedor</campo>
+   <campo type="date">datasai</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_fornecedor</indice>
+   <indice>datasai</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Nf de Serv Prestado" />
+ <doc_sub_tipo nome="Nf de Serv Prestado" path="/docinput/comercial/NfServPrest" />
+</ecmflow_extension>
