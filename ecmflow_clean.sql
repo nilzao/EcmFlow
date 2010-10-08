@@ -1,4 +1,17 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.9.2
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tempo de Geração: Out 08, 2010 as 10:35 AM
+-- Versão do Servidor: 5.0.51
+-- Versão do PHP: 5.2.4-2ubuntu5.10
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Banco de Dados: `ecmflow_install`
+--
 
 -- --------------------------------------------------------
 
@@ -138,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `doc_assinatura_tipo` (
   `id` smallint(2) NOT NULL auto_increment,
   `descricao` varchar(50) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Extraindo dados da tabela `doc_assinatura_tipo`
@@ -150,7 +163,8 @@ INSERT INTO `doc_assinatura_tipo` (`id`, `descricao`) VALUES
 (3, 'Reprovado'),
 (4, 'Lancado'),
 (5, 'Excluido'),
-(6, 'Editado');
+(6, 'Editado'),
+(7, 'Criado');
 
 -- --------------------------------------------------------
 
@@ -471,7 +485,7 @@ CREATE TABLE IF NOT EXISTS `knl_depto` (
   `id` smallint(6) NOT NULL auto_increment,
   `descricao` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `knl_depto`
@@ -479,7 +493,8 @@ CREATE TABLE IF NOT EXISTS `knl_depto` (
 
 INSERT INTO `knl_depto` (`id`, `descricao`) VALUES
 (1, 'root'),
-(2, 'depto teste');
+(2, 'Administradores'),
+(3, 'Auditores');
 
 -- --------------------------------------------------------
 
@@ -494,15 +509,16 @@ CREATE TABLE IF NOT EXISTS `knl_grupo` (
   `nome` varchar(100) NOT NULL,
   `usuarios` text NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `knl_grupo`
 --
 
 INSERT INTO `knl_grupo` (`id`, `id_knl_depto`, `id_knl_perm_bin`, `nome`, `usuarios`) VALUES
-(1, 1, 11, 'usuarios', ''),
-(2, 2, 1, 'grupo teste', '');
+(1, 1, 1, 'Usuários', ''),
+(2, 2, 1, 'Administração', ''),
+(3, 3, 1, 'Auditoria', '');
 
 -- --------------------------------------------------------
 
@@ -515,12 +531,15 @@ CREATE TABLE IF NOT EXISTS `knl_grupo_usuario` (
   `id_knl_usuario` int(11) NOT NULL,
   `id_knl_grupo` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `knl_grupo_usuario`
 --
 
+INSERT INTO `knl_grupo_usuario` (`id`, `id_knl_usuario`, `id_knl_grupo`) VALUES
+(1, 2, 2),
+(2, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -574,7 +593,7 @@ CREATE TABLE IF NOT EXISTS `knl_menu_cred` (
   `perm_grupo` smallint(3) NOT NULL,
   `perm_outros` smallint(3) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Extraindo dados da tabela `knl_menu_cred`
@@ -593,9 +612,12 @@ INSERT INTO `knl_menu_cred` (`id`, `id_knl_menu`, `id_knl_usuario`, `id_knl_grup
 (13, 12, 1, 0, 1, 0, 0),
 (14, 13, 1, 0, 1, 0, 0),
 (15, 14, 1, 0, 1, 0, 0),
-(16 , 3, 2, 0, 1, 0, 0),
-(17 , 4, 2, 0, 1, 0, 0),
-(18 , 5, 2, 0, 1, 0, 0);
+(16, 3, 0, 2, 0, 1, 0),
+(17, 4, 0, 2, 0, 1, 0),
+(18, 5, 0, 2, 0, 1, 0),
+(19, 3, 0, 3, 0, 1, 0),
+(20, 4, 0, 3, 0, 1, 0),
+(21, 5, 0, 3, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -643,7 +665,7 @@ CREATE TABLE IF NOT EXISTS `knl_usuario` (
   `passwdauth2` int(11) NOT NULL,
   `passwdauth3` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `knl_usuario`
@@ -651,4 +673,6 @@ CREATE TABLE IF NOT EXISTS `knl_usuario` (
 
 INSERT INTO `knl_usuario` (`id`, `id_knl_grupo`, `login`, `senha`, `script_ini`, `home`, `passwdlimpo`, `passwdauth1`, `passwdauth2`, `passwdauth3`) VALUES
 (1, 1, 'root', '63a9f0ea7bb98050796b649e85481845', '', '', 'root', 0, 0, 0),
-(2, 1, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '', '', 'user', 512, 512, 512);
+(2, 1, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '', '', 'user', 512, 512, 512),
+(3, 1, 'auditor', 'f7d07071ed9431ecae3a8d45b4c82bb2', '', '', 'auditor', 0, 0, 0);
+

@@ -66,9 +66,9 @@ class knl_dao_ext_new {
     	$m_doc_tipo = new knl_model_doc_tipo(0,$conf['doc_tipo'],$conf['extension'],"0");
         knl_dao_doc_tipo::getInstance()->upsert($m_doc_tipo);
         
-        $m_doc_tipo_cred = new knl_model_doc_tipo_cred(0,$m_doc_tipo->get_id(),1,0,1,0,0);
+        $m_doc_tipo_cred = new knl_model_doc_tipo_cred(0,$m_doc_tipo->get_id(),1,3,1,1,0);
         knl_dao_doc_tipo_cred::getInstance()->upsert($m_doc_tipo_cred);
-        $m_doc_tipo_cred = new knl_model_doc_tipo_cred(0,$m_doc_tipo->get_id(),2,0,1,0,0);
+        $m_doc_tipo_cred = new knl_model_doc_tipo_cred(0,$m_doc_tipo->get_id(),0,2,0,1,0);
         knl_dao_doc_tipo_cred::getInstance()->upsert($m_doc_tipo_cred);
         
         $m_doc_sub_tipo = new knl_model_doc_sub_tipo(0,
@@ -81,48 +81,48 @@ class knl_dao_ext_new {
 		$m_doc_sub_tipo_regra_cred = 
 			new knl_model_doc_sub_tipo_regra_cred(0,'A',-1,
 											     1,
-											     0,
+											     3,
 											     $m_doc_sub_tipo->get_id(),
 											     511,
-											     0,
+											     119,
 											     0);
 		knl_dao_doc_sub_tipo_regra_cred::getInstance()->upsert($m_doc_sub_tipo_regra_cred);
 		$m_doc_sub_tipo_regra_cred = 
 			new knl_model_doc_sub_tipo_regra_cred(0,'A',-1,
+											     0,
 											     2,
-											     0,
 											     $m_doc_sub_tipo->get_id(),
-											     287,
 											     0,
+											     287,
 											     0);
 		knl_dao_doc_sub_tipo_regra_cred::getInstance()->upsert($m_doc_sub_tipo_regra_cred);
 		$m_doc_sub_tipo_regra_cred = 
 			new knl_model_doc_sub_tipo_regra_cred(0,'A',4,
+											     0,
 											     2,
-											     0,
 											     $m_doc_sub_tipo->get_id(),
-											     224,
 											     0,
+											     224,
 											     0);
 		knl_dao_doc_sub_tipo_regra_cred::getInstance()->upsert($m_doc_sub_tipo_regra_cred);
 		$m_doc_sub_tipo_regra_cred = 
 			new knl_model_doc_sub_tipo_regra_cred(0,'R',4,
+											     0,
 											     2,
-											     0,
 											     $m_doc_sub_tipo->get_id(),
-											     8,
 											     0,
+											     8,
 											     0);
 		knl_dao_doc_sub_tipo_regra_cred::getInstance()->upsert($m_doc_sub_tipo_regra_cred);
 		
 		$m_doc_sub_tipo_regra_pend = 
-			new knl_model_doc_sub_tipo_regra_pend(0,-1,4,$m_doc_sub_tipo->get_id(),2,0);
+			new knl_model_doc_sub_tipo_regra_pend(0,-1,4,$m_doc_sub_tipo->get_id(),0,2);
 		knl_dao_doc_sub_tipo_regra_pend::getInstance()->upsert($m_doc_sub_tipo_regra_pend);
 		$m_doc_sub_tipo_regra_pend = 
-			new knl_model_doc_sub_tipo_regra_pend(0,4,5,$m_doc_sub_tipo->get_id(),2,0);
+			new knl_model_doc_sub_tipo_regra_pend(0,4,5,$m_doc_sub_tipo->get_id(),0,2);
 		knl_dao_doc_sub_tipo_regra_pend::getInstance()->upsert($m_doc_sub_tipo_regra_pend);
 		$m_doc_sub_tipo_regra_pend = 
-			new knl_model_doc_sub_tipo_regra_pend(0,4,1,$m_doc_sub_tipo->get_id(),2,0);
+			new knl_model_doc_sub_tipo_regra_pend(0,4,1,$m_doc_sub_tipo->get_id(),0,2);
 		knl_dao_doc_sub_tipo_regra_pend::getInstance()->upsert($m_doc_sub_tipo_regra_pend);
     }
 }

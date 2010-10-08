@@ -95,7 +95,12 @@ class knl_domain_Shell {
     	$classe = str_replace("_","",$mDocTipo->get_classe());
     	$DocH = call_user_func("knl_extensions_".$classe."_shell::getInstance");
     	$DocH->gravaNoBanco($valores);
-
+    	
+    	$doc_assinatura = knl_dao_doc_assinatura::getInstance();
+    	$m_doc_assinatura = 
+    		new knl_model_doc_assinatura(0,$newDoc->get_id(),7,1,date("Y-m-d H:i:s"),'S');
+    	$doc_assinatura->upsert($m_doc_assinatura);
+    	
     	echo $newDoc->get_id();
     	
     	$Regras = knl_lib_Regras::getInstance();
