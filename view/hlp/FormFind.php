@@ -53,22 +53,5 @@ class knl_view_hlp_FormFind extends knl_view_hlp_FormFindJs {
     public function html_DocSubTipoCombo(){
     	return $this->DocSubTipoCombo;
     }
-    
-    /*Inicio limpeza*/
-/*
-    public function monta_AchaCotacaoCli(){
-        $this->AchaCotacaoCli = "Cliente:
-        <div><input type=\"text\" id=\"cotacao_cli\" name=\"cotacao_cli\" autocomplete=\"off\"
-        onKeyUp=\"ajaxCotacaoCli(this.value);\">
-        <div style=\"border-style:solid;border-width:1px;
-             position:fixed;background-color:white;display:none;\"
-             id=\"div_find_cotacao_cli\"></div></div>";
-    }
-
-    public function html_AchaCotacaoCli () {
-        return $this->AchaCotacaoCli;
-    }
-*/
-    /*Fim limpeza*/
 }
 ?>

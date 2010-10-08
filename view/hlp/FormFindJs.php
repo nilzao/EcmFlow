@@ -40,14 +40,5 @@ function mostraFormpp(formppName){
     public function js_FormsSpec(){
     	return $this->FormsSpec;
     }
-
-    /* Inicio Limpeza */
-    public function monta_AchaCotacaoCliJs(){
-        if ($this->AchaCotacaoCliJs == 0){
-            $this->FormsSpec .= "\n<script type=\"text/javascript\" src=\"./view/js/cotacao_cli.js\"></script>\n";
-            $this->AchaCotacaoCliJs = 1;
-        }
-    }
-    /* Fim limpeza */
 }
 ?>
