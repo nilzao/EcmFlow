@@ -485,7 +485,7 @@ CREATE TABLE IF NOT EXISTS `knl_depto` (
   `id` smallint(6) NOT NULL auto_increment,
   `descricao` varchar(100) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Extraindo dados da tabela `knl_depto`
@@ -509,7 +509,7 @@ CREATE TABLE IF NOT EXISTS `knl_grupo` (
   `nome` varchar(100) NOT NULL,
   `usuarios` text NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 PACK_KEYS=1 AUTO_INCREMENT=11 ;
 
 --
 -- Extraindo dados da tabela `knl_grupo`
@@ -665,7 +665,7 @@ CREATE TABLE IF NOT EXISTS `knl_usuario` (
   `passwdauth2` int(11) NOT NULL,
   `passwdauth3` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Extraindo dados da tabela `knl_usuario`

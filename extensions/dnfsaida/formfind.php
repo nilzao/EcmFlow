@@ -1,7 +1,11 @@
 <div id="dnfsaida" style="display:block">
 Nota fiscal de saida:<br>
 <?php
-$knl_helper->setVar("head",'<script type="text/javascript" src="./extensions/cadastronf/cadastronf.js"></script>');
+$head = array('cadastronf'=>'<script type="text/javascript" src="./extensions/cadastronf/cadastronf.js"></script>');
+if($knl_helper->isSetVar("head")){
+	$head = array_merge($head,$knl_helper->getVar("head")); 
+}
+$knl_helper->setVar("head",$head);
 ?>
 Cnpj/Cpf: <input type="text" name="cnpj" id="cnpj"><a href="#" onclick="popAchaForn();">Achar CNPJ por Razão</a><br>
 <br>

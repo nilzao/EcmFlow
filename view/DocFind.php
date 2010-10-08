@@ -16,7 +16,10 @@ $helperForm->monta_FormsSpec($tipos);
 echo $helperForm->js_FormsSpec();
 
 if($knl_helper->isSetVar("head")){
-	echo $knl_helper->getVar("head");
+	$head = $knl_helper->getVar("head");
+	foreach($head as $v){
+		echo $v."\n";
+	}
 }
 ?>
 

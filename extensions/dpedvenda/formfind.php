@@ -1,7 +1,11 @@
 <div id="dpedvenda">
 Pedido de venda:<br>
 <?php
-$knl_helper->setVar("head",'<script type="text/javascript" src="./extensions/cadastronf/cadastronf.js"></script>');
+$head = "";
+if($knl_helper->isSetVar("head")){
+	$head = $knl_helper->getVar("head");	
+}
+$knl_helper->setVar("head",$head.'<script type="text/javascript" src="./extensions/cadastronf/cadastronf.js"></script>');
 ?>
 Cnpj/Cpf: <input type="text" name="cnpj" id="cnpj"><a href="#" onclick="popAchaForn();">Achar CNPJ por Razão</a><br>
 <br>
