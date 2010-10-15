@@ -2,11 +2,11 @@
 <ecmflow_extension nome="dpedcompra" type="aux">
  <tabela nome="d_ped_compra_entrega">
   <head_tabela>
-   <campo type="int(11)">id_ped_compra</campo>
+   <campo type="int(11)">id_d_ped_compra</campo>
    <campo type="date">dataentrega</campo>
   </head_tabela>
   <key_tabela>
-   <indice>id_ped_compra</indice>
+   <indice>id_d_ped_compra</indice>
    <indice>dataentrega</indice>
   </key_tabela>
  </tabela> 
