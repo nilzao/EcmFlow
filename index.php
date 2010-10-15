@@ -15,6 +15,7 @@ function __autoload($class_name) {
 
 $path = './lib/adodb5'. PATH_SEPARATOR ."./lib/mailer";
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+date_default_timezone_set(knl_lib_Config::getInstance()->get_timezone());
 require_once("adodb.inc.php");
 header( 'Content-type: text/html; charset=utf-8' );
 $shell = (isset($argv)) ? $argv : array();
