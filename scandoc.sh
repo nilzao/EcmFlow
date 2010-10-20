@@ -1,13 +1,31 @@
 #!/bin/bash
 caminho="/docinput/"
 dir_install="/paginas/ecmflow_git/"
-#cd $dir_install
 while [ true ]; do
+ totalbmp=$(find $caminho -iname "*.bmp" | grep -m 1 -ic .bmp)
+ if [ $totalbmp == 1 ]; then
+    o=$(find $caminho -iname "*.bmp" -printf "\"%p\"\n" | grep -m1 "");
+    imagickargs="-quality 50 -format jpeg -geometry 1000x9000 $o jpg:${o/bmp/jpg}";
+    du_args="-b $o";
+    str_1="";
+    str_2="x"
+    while [ "$str_1" != "$str_2" ]; do
+     str_1=$(echo $du_args|xargs du);
+     sleep 1;
+     str_2=$(echo $du_args|xargs du);
+    done;
+    
+#para depurar:
+#    echo convert $imagickargs;
+#    echo rm -rf $o;
+    echo $imagickargs | xargs convert;
+    echo $o |xargs rm -rf;
+ fi
+ 
  totaljpg=$(find $caminho -iname "*.jpg" | grep -m 1 -ic .jpg)
  if [ $totaljpg == 1 ]; then
     o=$(find $caminho -iname "*.jpg" -printf "\"%p\"\n" | grep -m1 "")
     imagickargs="-quality 50 -format jpeg -geometry 1000x9000 $o jpg:$o";
-    
     du_args="-b $o";
     str_1="";
     str_2="x"
