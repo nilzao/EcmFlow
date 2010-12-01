@@ -1,5 +1,5 @@
 <?php
-class knl_extensions_dcotvenda_filtro extends knl_lib_daoext_Convert {
+class knl_extensions_dordserv_filtro extends knl_lib_daoext_Convert {
     private static $instance;
     
     private function __construct() {}
@@ -13,7 +13,8 @@ class knl_extensions_dcotvenda_filtro extends knl_lib_daoext_Convert {
     public function montaFiltro(){
       $filtro = array();      
     	$request = knl_lib_Registry::getRequestObj();
-    	$filtro = array('cotacao_cli'=>$request->getRequest('cotacao_cli'));
+    	$filtro = array('malha'=>$request->getRequest('malha'),
+    	                'fio'=>$request->getRequest('fio'));
     	return $filtro;
     }
 }

@@ -1,5 +1,5 @@
 <?php
-class knl_extensions_dcotcompra_criteria extends knl_lib_daoext_Convert {
+class knl_extensions_dordserv_criteria extends knl_lib_daoext_Convert {
 	private static $instance;
 	private $sql;
 	private $ArrayBind = array();
@@ -19,14 +19,20 @@ class knl_extensions_dcotcompra_criteria extends knl_lib_daoext_Convert {
 	
 	public function montaSql($arrayFiltro){
 		$this->sql = "";
-		$this->innerJoin .= " LEFT JOIN d_cot_compra ON (tb.id = d_cot_compra.id_doc) ";
-    	$this->orderBy = array("tb.numero");
-    	
-	    $this->innerJoin .= " LEFT JOIN d_cotacao_cli ON (d_cotacao_cli.id = d_cot_compra.id_fornecedor) ";
-	    $this->orderBy = array("d_cotacao_cli.nome","tb.numero");
+		$this->innerJoin .= " LEFT JOIN d_ord_serv ON (tb.id = d_ord_serv.id_doc) ";
+	    $this->innerJoin .= " LEFT JOIN d_cotacao_cli ON (d_cotacao_cli.id = d_ord_serv.id_fornecedor) ";
+	    $this->orderBy = array("d_cotacao_cli.nome","d_ord_serv.malha","d_ord_serv.fio","tb.numero");
 	    if (!empty($arrayFiltro['cotacao_cli'])){
 	        $this->sql .= " AND d_cotacao_cli.nome = ? ";
 	        $this->ArrayBind[] = $arrayFiltro['cotacao_cli'];
+	    }
+	    if(!empty($arrayFiltro['malha'])){
+	    	$this->sql .= " AND d_ord_serv.malha = ? ";
+	        $this->ArrayBind[] = $arrayFiltro['malha'];
+	    }
+		if(!empty($arrayFiltro['fio'])){
+	    	$this->sql .= " AND d_ord_serv.fio = ? ";
+	        $this->ArrayBind[] = $arrayFiltro['fio'];
 	    }
 	}
 	

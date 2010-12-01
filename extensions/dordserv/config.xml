@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ecmflow_extension nome="dordserv" type="doc">
+ <tabela nome="d_ord_serv">
+  <head_tabela>
+   <campo type="int(11)">id_doc</campo>
+   <campo type="int(11)">id_fornecedor</campo>
+   <campo type="decimal(8,2)">malha</campo>
+   <campo type="decimal(8,2)">fio</campo>
+  </head_tabela>
+  <key_tabela>
+   <indice>id_doc</indice>
+   <indice>id_fornecedor</indice>
+   <indice>malha</indice>
+   <indice>fio</indice>
+  </key_tabela>
+ </tabela>
+ <doc_tipo nome="Ordem de Serviço" />
+ <doc_sub_tipo nome="Ordem de Serviço" path="/docinput/producao/OrdemServico" />
+</ecmflow_extension>

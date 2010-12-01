@@ -24,7 +24,6 @@ class knl_extensions_dcotvenda_criteria extends knl_lib_daoext_Convert {
 	    $this->orderBy = array("d_cotacao_cli.nome","tb.numero");
 	    if (!empty($arrayFiltro['cotacao_cli'])){
 	        $this->sql .= " AND d_cotacao_cli.nome = ? ";
-	        //$arrayFiltro['cotacao_cli'] = $this->limpacnpj($arrayFiltro['cotacao_cli']);
 	        $this->ArrayBind[] = $arrayFiltro['cotacao_cli'];
 	    }
 	}
