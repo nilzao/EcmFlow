@@ -1,0 +1,8 @@
+#backup files
+*~
+
+#eclipse project files
+.buildpath
+.settings/
+.project
+
