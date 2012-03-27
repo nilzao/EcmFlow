@@ -50,7 +50,7 @@ while [ true ]; do
  total=$(find $caminho -iname "*.pdf" | grep -m 1 -ic .pdf)
   if [ $total == 1 ]; then
     o=$(find $caminho -iname "*.pdf" -printf "\"%p\"\n" | grep -m1 "")
-    imagickargs="-density 300x300 -format jpeg -geometry 1000x9000 $o jpg:$caminho"tmp/docX.jpg"";
+    imagickargs="-density 300x300 -format jpeg -geometry -flatten -background white 1000x9000 $o jpg:$caminho"tmp/docX.jpg"";
 
     du_args="-b $o";
     str_1="";
