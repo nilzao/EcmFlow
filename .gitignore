@@ -6,3 +6,6 @@
 .settings/
 .project
 
+#config
+lib/Config.php
+
