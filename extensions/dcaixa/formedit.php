@@ -1,5 +1,5 @@
 <?php
-$helperFormEdit = knl_view_hlp_FormEdit::getInstance();
+$helperFormEdit = knl_view_w3c_hlp_FormEdit::getInstance();
 $caixa = $knl_helper->getVar('cabecalho');
 //print_r($caixa);die();
 $helperFormEdit->monta_CampoData($caixa['dcaixa']->get_data_ini(),"data_ini");

@@ -1,5 +1,5 @@
 <?php
- $helperAnexoCab = knl_view_hlp_AnexoCab::getInstance();
+ $helperAnexoCab = knl_view_w3c_hlp_AnexoCab::getInstance();
  $documento = $knl_helper->getVar("doc");
  $cabecalho = $knl_helper->getVar("cabecalho");
 

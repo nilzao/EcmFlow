@@ -2,7 +2,7 @@
  $documento = $knl_helper->getVar("doc");
  $cabecalho = $knl_helper->getVar("cabecalho");
  $empresas = $knl_helper->getVar("empresas");
- $helperFormEdit = knl_view_hlp_FormEdit::getInstance();
+ $helperFormEdit = knl_view_w3c_hlp_FormEdit::getInstance();
 
  $helperFormEdit->monta_CampoData($documento->get_data_doc(),"data_doc");
  $helperFormEdit->monta_ComboEmpresa($empresas,$documento->get_id_empresa());

@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
-$helperLista = knl_view_hlp_Lista::getInstance();
+$helperLista = knl_view_w3c_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
 echo $helperLista->js_ListaJs();
 ?>
@@ -11,7 +11,7 @@ echo $helperLista->js_ListaJs();
  <body bgcolor="FFFFFF">
   <h1>Anexar documento</h1>
 <?php
-$helperPag = knl_view_hlp_Paginacao::getInstance();
+$helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 
 $lista = $knl_helper->getVar("lista");
 $paginacao = $knl_helper->getVar("paginacao");

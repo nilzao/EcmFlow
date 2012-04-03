@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
-$helperLista = knl_view_hlp_Lista::getInstance();
+$helperLista = knl_view_w3c_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
 $pag = $knl_helper->getVar("pag");
 echo $helperLista->js_ListaJs();
@@ -52,9 +52,9 @@ foreach($lista as $doc) {
  </head>
  <body bgcolor="FFFFFF" style="margin-top:0px;margin-bottom:0px;">
 <?php
-//$helperPag = knl_view_hlp_Paginacao::getInstance();
-$helperAnexoTop = knl_view_hlp_AnexoTop::getInstance();
-$helperShowBtn = knl_view_hlp_ShowBtn::getInstance();
+//$helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
+$helperAnexoTop = knl_view_w3c_hlp_AnexoTop::getInstance();
+$helperShowBtn = knl_view_w3c_hlp_ShowBtn::getInstance();
 
 
 //$paginacao = $knl_helper->getVar("paginacao");

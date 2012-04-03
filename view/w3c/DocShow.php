@@ -3,10 +3,10 @@
  $cabecalho = $knl_helper->getVar("cabecalho");
  $pag = $knl_helper->getVar("pag");
  $obsCount = $knl_helper->getVar("obsCount");
- $helperShowBtn = knl_view_hlp_ShowBtn::getInstance();
- $helperShowCab = knl_view_hlp_ShowCab::getInstance();
- $helperShowDiv = knl_view_hlp_ShowDiv::getInstance();
- $helperShowPag = knl_view_hlp_ShowPag::getInstance();
+ $helperShowBtn = knl_view_w3c_hlp_ShowBtn::getInstance();
+ $helperShowCab = knl_view_w3c_hlp_ShowCab::getInstance();
+ $helperShowDiv = knl_view_w3c_hlp_ShowDiv::getInstance();
+ $helperShowPag = knl_view_w3c_hlp_ShowPag::getInstance();
  
  $actions = $cabecalho['docActions'];
  $helperShowBtn->monta_Actions($actions,$obsCount);

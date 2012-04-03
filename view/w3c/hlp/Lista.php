@@ -1,5 +1,5 @@
 <?php
-class knl_view_w3c_hlp_Lista extends knl_view_hlp_ListaJs {
+class knl_view_w3c_hlp_Lista extends knl_view_w3c_hlp_ListaJs {
 	private static $instance;
 	private $Lista = "";
 	private $onclick = "";
@@ -68,7 +68,7 @@ class knl_view_w3c_hlp_Lista extends knl_view_hlp_ListaJs {
 				    }
 				      else {
 				      	  $k = str_replace(";","",$k);
-				      	  $func = "knl_view_hlp_".$k."::getInstance";
+				      	  $func = "knl_view_w3c_hlp_".$k."::getInstance";
 				      	  $obj_hlp = call_user_func($func);
 				      	  $metodo = "monta_".$k;
 				      	  $obj_hlp->$metodo($oZ);

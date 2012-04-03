@@ -1,7 +1,7 @@
 <?php 
 $tipos = $knl_helper->getVar("tipos");
 $subTipos = $knl_helper->getVar("subTipos");
-$helperForm = knl_view_hlp_FormFind::getInstance();
+$helperForm = knl_view_w3c_hlp_FormFind::getInstance();
 ?>
 <html>
  <head>
