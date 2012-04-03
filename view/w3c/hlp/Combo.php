@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_Combo {
+class knl_view_w3c_hlp_Combo {
 	private static $instance;
 	private $DocTipoCombo;
 	private $DocSubTipoCombo;

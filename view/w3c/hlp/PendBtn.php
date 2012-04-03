@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_PendBtn {
+class knl_view_w3c_hlp_PendBtn {
 	private static $instance;
     private $PendBtnHtml = "";
     private $PendBtnJs = "";

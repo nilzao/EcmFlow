@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_FormEditjs {
+class knl_view_w3c_hlp_FormEditjs {
 	private static $instance;
 	private $FormEditJs = "";
 	private $FormEditHtml = array();

@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_newAPagarBtn {
+class knl_view_w3c_hlp_newAPagarBtn {
 	private static $instance;
 	private $AnexaBtn = "X";
 

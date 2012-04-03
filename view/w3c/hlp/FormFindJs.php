@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_FormFindJs {
+class knl_view_w3c_hlp_FormFindJs {
 	private static $instance;
 	private $FormsSpec;
     private $AchaCotacaoCliJs = 0;

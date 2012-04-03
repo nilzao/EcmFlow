@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_ShowPag {
+class knl_view_w3c_hlp_ShowPag {
 	private static $instance;
 	private $Paginas = "";
 	private $PaginasCss = "<link rel=\"stylesheet\" href=\"view/css/paginas.css\" type=\"text/css\">\n";

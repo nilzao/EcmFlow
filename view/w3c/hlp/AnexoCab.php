@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_AnexoCab {
+class knl_view_w3c_hlp_AnexoCab {
 	private static $instance;
 	private $Cabecalho = "";
 

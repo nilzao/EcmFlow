@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_AnexoTop {
+class knl_view_w3c_hlp_AnexoTop {
 	private static $instance;
 	private $Origem = "";
 

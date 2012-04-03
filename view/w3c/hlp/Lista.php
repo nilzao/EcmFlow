@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_Lista extends knl_view_hlp_ListaJs {
+class knl_view_w3c_hlp_Lista extends knl_view_hlp_ListaJs {
 	private static $instance;
 	private $Lista = "";
 	private $onclick = "";

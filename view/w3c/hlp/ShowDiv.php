@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_ShowDiv {
+class knl_view_w3c_hlp_ShowDiv {
 	private static $instance;
 	private $DivCss= "";
 	private $DivJs = "";

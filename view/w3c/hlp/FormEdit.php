@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_FormEdit extends knl_view_hlp_FormEditJs {
+class knl_view_w3c_hlp_FormEdit extends knl_view_hlp_FormEditJs {
 	private static $instance;
 	private $FormSpec = "";
 	private $Fornecedor = "";

@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_DesanexaBtn {
+class knl_view_w3c_hlp_DesanexaBtn {
 	private static $instance;
 	private $DesanexaBtn = "X";
 

@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_ListaDPedEntrega {
+class knl_view_w3c_hlp_ListaDPedEntrega {
 	private static $instance;
 	private $DataEntrega = "";
 

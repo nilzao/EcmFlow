@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_ShowBtn {
+class knl_view_w3c_hlp_ShowBtn {
 	private static $instance;
 	private $BtnAnexar = "";
 	private $BtnExcluir = "";

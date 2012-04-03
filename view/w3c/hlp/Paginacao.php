@@ -1,5 +1,5 @@
 <?php
-class knl_view_hlp_Paginacao {
+class knl_view_w3c_hlp_Paginacao {
 	private static $instance;
 	private $Paginacao = "";
 	private $ProximaPag = "Próxima";
