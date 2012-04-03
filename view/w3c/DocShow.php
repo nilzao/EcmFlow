@@ -44,7 +44,7 @@
  <script language="JavaScript" type="text/javascript" src="./view/js/addparent.js"></script>
  
  <!--script language="JavaScript" type="text/javascript" src="./view/js/jquery.js"></script-->
-<link href="./view/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="./view/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/js/jquery-ui.min.js"></script>
 
@@ -52,7 +52,7 @@
  <script language="JavaScript" type="text/javascript" src="./view/js/segue.js"></script>
  <script src="./view/js/jquery.easing.1.3.js" type="text/javascript"></script>
  <script src="./view/js/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
- <link rel="stylesheet" href="./view/css/sexylightbox.css" type="text/css" media="all" />
+ <link rel="stylesheet" href="./view/w3c/css/sexylightbox.css" type="text/css" media="all" />
  
  <script language="JavaScript" type="text/javascript">
 var _pag_js = <?php echo $pag ; ?>;
@@ -101,7 +101,7 @@ function IeScroll() {
 
 $(document).ready(function(){
 	IeScroll();ativa_setXY();
-	SexyLightbox.initialize({dir: './img/sexylightbox/'});
+	SexyLightbox.initialize({dir: './view/w3c/img/sexylightbox/'});
 
 	$("#lixeira_caneta").droppable({
 		drop: function(event, ui) { del_caneta(ui.draggable); }
@@ -186,7 +186,7 @@ function load_div(html){
 	#doc_show {
 	height:186px;
 	padding:0px;
-	background-image: url("./img/docshow/barra.jpg");
+	background-image: url("./view/w3c/img/docshow/barra.jpg");
 	min-width:1000px;
 	z-index:0;
 	}
@@ -265,7 +265,7 @@ function load_div(html){
 	width:100%;
 	height: 28px;
 	padding:0px;
-	background-image: url("./img/docshow/barrasombra.jpg");
+	background-image: url("./view/w3c/img/docshow/barrasombra.jpg");
 	background-repeat:repeat-x;
 	background-color: #000000;
 	}
@@ -356,13 +356,13 @@ echo $helperShowPag->html_Paginas();
 <div id="doc_show_botoes">
 <div id="doc_sombra">
 <div id="doc_botoes">
-<img src="./img/docshow/esq.jpg"><!-- a href="#"><img alt="Enviar por email" title="Enviar por email" src="./img/icones/botemail.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=MailForm&doc_id=<?php echo $documento->get_id(); ?>')"></a><img src="./img/docshow/entrebotoes.jpg"--><a href="#"><img alt="Ferramentas" title="Ferramentas" src="./img/icones/botanexo.jpg" border="0" onclick="show_ferramentas('<?php echo $documento->get_id(); ?>','<?php echo $pag; ?>');"></a><img src="./img/docshow/entrebotoes.jpg"><a href="#"><img alt="Anexos" title="Anexos" src="./img/icones/botanexo.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=AnexoList&doc_id=<?php echo $documento->get_id(); ?>&pag=<?php echo $pag; ?>')"></a><img src="./img/docshow/entrebotoes.jpg"><a href="#"><img alt="Assinaturas" title="Assinaturas" src="./img/icones/botassina.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=AssinaturaList&id=<?php echo $documento->get_id(); ?>')"></a><img src="./img/docshow/entrebotoes.jpg"><!--a href="#">< img alt="Carimbos" title="Carimbos" src="./img/icones/botcarimbo.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=CarimboList&id=<?php echo $documento->get_id(); ?>')"></a><img src="./img/docshow/entrebotoes.jpg"--><?php
+<img src="./view/w3c/img/docshow/esq.jpg"><!-- a href="#"><img alt="Enviar por email" title="Enviar por email" src="./view/w3c/img/icones/botemail.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=MailForm&doc_id=<?php echo $documento->get_id(); ?>')"></a><img src="./view/w3c/img/docshow/entrebotoes.jpg"--><a href="#"><img alt="Ferramentas" title="Ferramentas" src="./view/w3c/img/icones/botanexo.jpg" border="0" onclick="show_ferramentas('<?php echo $documento->get_id(); ?>','<?php echo $pag; ?>');"></a><img src="./view/w3c/img/docshow/entrebotoes.jpg"><a href="#"><img alt="Anexos" title="Anexos" src="./view/w3c/img/icones/botanexo.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=AnexoList&doc_id=<?php echo $documento->get_id(); ?>&pag=<?php echo $pag; ?>')"></a><img src="./view/w3c/img/docshow/entrebotoes.jpg"><a href="#"><img alt="Assinaturas" title="Assinaturas" src="./view/w3c/img/icones/botassina.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=AssinaturaList&id=<?php echo $documento->get_id(); ?>')"></a><img src="./view/w3c/img/docshow/entrebotoes.jpg"><!--a href="#">< img alt="Carimbos" title="Carimbos" src="./view/w3c/img/icones/botcarimbo.jpg" border="0" onclick="iframeSet('index.php?domain=Doc&action=CarimboList&id=<?php echo $documento->get_id(); ?>')"></a><img src="./view/w3c/img/docshow/entrebotoes.jpg"--><?php
 	echo $helperShowBtn->html_Action('Obs');
 	echo $helperShowBtn->html_Action('Excluir');
     //echo $helperShowBtn->html_Action('Anexar');
    echo $helperShowBtn->html_Action('Aprovar');
    echo $helperShowBtn->html_Action('Editar');
-?><img src="./img/docshow/dir.jpg">
+?><img src="./view/w3c/img/docshow/dir.jpg">
 </div>
 </div>
 </div>

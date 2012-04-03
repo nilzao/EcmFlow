@@ -32,7 +32,7 @@ foreach($lista as $doc) {
 	?>
 		 img_obj = parent.make_obj('<?php
 		 echo "anx_".$doc['doc_anexo']->get_id();?>','<?php
-		 echo "./img/icones/anexo.png";?>','<?php
+		 echo "./view/w3c/img/icones/anexo.png";?>','<?php
 		 echo $msg;?>','<?php
 		 echo $doc['doc_anexo']->get_id();?>','<?php
 		 echo $doc['doc_anexo']->get_x();?>','<?php 
@@ -48,7 +48,7 @@ foreach($lista as $doc) {
 
 ?>
 </script>
-<link rel="stylesheet" href="view/css/lista.css" type="text/css">
+<link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
  </head>
  <body bgcolor="FFFFFF" style="margin-top:0px;margin-bottom:0px;">
 <?php

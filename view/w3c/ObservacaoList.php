@@ -23,7 +23,7 @@ foreach($lista as $obs) {
 	?>
 		parent.add_obj('<?php
 		 echo "obs_".$obs->get_id();?>','<?php
-		 echo "./img/icones/note.png";?>','<?php
+		 echo "./view/w3c/img/icones/note.png";?>','<?php
 		 echo $msg;?>','<?php
 		 echo $obs->get_id();?>','<?php
 		 echo $obs->get_x();?>','<?php 
@@ -49,7 +49,7 @@ foreach($lista as $obs) {
 	$msg = str_replace("\x0C",'',$msg);
 	$msg = str_replace("\x0D",'',$msg);
 	$msg = str_replace("\x0E",'',$msg);
-	echo "<img src=\"./img/icones/note.png\" onclick=\"parent.set_follow('obs_".$obs->get_id()."','./img/icones/note.png','".$msg."','".$obs->get_id()."','ObsSetxy');\">\n";
+	echo "<img src=\"./view/w3c/img/icones/note.png\" onclick=\"parent.set_follow('obs_".$obs->get_id()."','./view/w3c/img/icones/note.png','".$msg."','".$obs->get_id()."','ObsSetxy');\">\n";
 	echo $obs->get_obs();
 }
 ?>

@@ -21,7 +21,7 @@ if($knl_helper->isSetVar("head")){
 	echo $knl_helper->getVar("head");
 }
 ?>
-<link rel="stylesheet" href="view/css/formedit.css" type="text/css">
+<link rel="stylesheet" href="view/w3c/css/formedit.css" type="text/css">
 </head>
 <body bgcolor="#FFFFFF">
 <form action="index.php?domain=Doc&action=DocEdit" method="POST">

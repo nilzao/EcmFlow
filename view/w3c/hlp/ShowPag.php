@@ -2,7 +2,7 @@
 class knl_view_w3c_hlp_ShowPag {
 	private static $instance;
 	private $Paginas = "";
-	private $PaginasCss = "<link rel=\"stylesheet\" href=\"view/css/paginas.css\" type=\"text/css\">\n";
+	private $PaginasCss = "<link rel=\"stylesheet\" href=\"view/w3c/css/paginas.css\" type=\"text/css\">\n";
 	private $PaginasJs = "
 	<script>
 	  function loadPag (id_doc,pag){

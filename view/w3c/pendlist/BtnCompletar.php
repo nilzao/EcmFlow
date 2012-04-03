@@ -1,1 +1,1 @@
-<img src="./img/icones/edita.png">
+<img src="./view/w3c/img/icones/edita.png">

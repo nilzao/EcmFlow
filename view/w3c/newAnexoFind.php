@@ -17,7 +17,7 @@ echo $helperForm->js_FormsSpec();
   <title>
    Anexar Documento
   </title>
-<link rel="stylesheet" href="view/css/formfind.css" type="text/css">
+<link rel="stylesheet" href="view/w3c/css/formfind.css" type="text/css">
  </head>
  <body bgcolor="#FFFFFF">
   <h1>Anexar Documento</h1>

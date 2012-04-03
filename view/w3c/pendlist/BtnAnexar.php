@@ -1,1 +1,1 @@
-<img src="./img/icones/anexo.png">
+<img src="./view/w3c/img/icones/anexo.png">

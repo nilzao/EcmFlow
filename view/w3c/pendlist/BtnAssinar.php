@@ -1,1 +1,1 @@
-<img src="./img/icones/assinatura.png">
+<img src="./view/w3c/img/icones/assinatura.png">

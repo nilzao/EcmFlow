@@ -6,7 +6,7 @@ $helperLista = knl_view_w3c_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
 echo $helperLista->js_ListaJs();
 ?>
-<link rel="stylesheet" href="view/css/lista.css" type="text/css">
+<link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
  </head>
  <body bgcolor="FFFFFF">
   <h1>Anexar documento</h1>

@@ -13,13 +13,13 @@ class knl_view_w3c_hlp_AnexaMarcaBtn {
     
     public function monta_AnexaMarcaBtn ($array_full) {
     	//$this->AnexaMarcaBtn = "<center>".$doc_anexo->get_id()."</center>";
-    	//$this->AnexaMarcaBtn = "<center><img src=\"./img/icones/anexo.png\" onclick=\"parent.set_follow('anx_".$array_full["doc_anexo"]->get_id()."','./img/icones/anexo.png','','".$array_full["doc_anexo"]->get_id()."','AnexoSetxy');\"></center>\n";
+    	//$this->AnexaMarcaBtn = "<center><img src=\"./view/w3c/img/icones/anexo.png\" onclick=\"parent.set_follow('anx_".$array_full["doc_anexo"]->get_id()."','./view/w3c/img/icones/anexo.png','','".$array_full["doc_anexo"]->get_id()."','AnexoSetxy');\"></center>\n";
     	
         if (key_exists("desanexar",$array_full['docActions']) and empty($array_full['anexoTop']['doc_anexo'])){
     	   //$vl = knl_view_Loader::getInstance();
            //$vl->setVar("anexoTop",$arrayFull['anexoTop']);
            //$vl->setVar("id",$arrayFull['doc']->get_id());
-           $this->AnexaMarcaBtn = "<center><img src=\"./img/icones/anexo.png\" onclick=\"parent.set_follow('anx_".$array_full["doc_anexo"]->get_id()."','./img/icones/anexo.png','','".$array_full["doc_anexo"]->get_id()."','AnexoSetxy');\"></center>\n";
+           $this->AnexaMarcaBtn = "<center><img src=\"./view/w3c/img/icones/anexo.png\" onclick=\"parent.set_follow('anx_".$array_full["doc_anexo"]->get_id()."','./view/w3c/img/icones/anexo.png','','".$array_full["doc_anexo"]->get_id()."','AnexoSetxy');\"></center>\n";
        	}
     }
     

@@ -20,7 +20,7 @@ class knl_view_w3c_hlp_ListaJs {
     	  window.open(url,janela,\"toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,copyhistory=0,width=\"+W+\",height=\"+H+\",top=0,left=0\");
         }\n";
     	$this->ListaJs .= "</script>\n";
-		$this->ListaJs .= "<link rel=\"stylesheet\" href=\"./view/css/lista.css\" type=\"text/css\">";
+		$this->ListaJs .= "<link rel=\"stylesheet\" href=\"./view/w3c/css/lista.css\" type=\"text/css\">";
     }
     
     public function set_ListaJs($js){

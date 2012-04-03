@@ -1,1 +1,1 @@
-<img src="./img/icones/aprovar.gif">
+<img src="./view/w3c/img/icones/aprovar.gif">
