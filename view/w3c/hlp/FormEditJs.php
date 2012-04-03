@@ -83,11 +83,11 @@ function add_div{$nome} () {
     }
 	
 	public function monta_SoNumJs() {
-		$this->SoNumJs = "<script type=\"text/javascript\" src=\"./view/js/sonum.js\"></script>\n";
+		$this->SoNumJs = "<script type=\"text/javascript\" src=\"./view/w3c/js/sonum.js\"></script>\n";
 	}
     
     public function monta_CampoDataJs() {
-		$this->CampoDataJs = "<script type=\"text/javascript\" src=\"./view/js/data.js\"></script>\n";
+		$this->CampoDataJs = "<script type=\"text/javascript\" src=\"./view/w3c/js/data.js\"></script>\n";
     }
 
     public function monta_CampoValorJs() {

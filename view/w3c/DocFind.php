@@ -27,7 +27,7 @@ if($knl_helper->isSetVar("head")){
    Documento
   </title>
 <link rel="stylesheet" href="view/w3c/css/formfind.css" type="text/css">
-<script type="text/javascript" src="./view/js/jquery.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 </head>
  <body bgcolor="#FFFFFF">
   <h1>Documento</h1>

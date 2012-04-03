@@ -40,18 +40,18 @@
     echo $helperShowPag->css_Paginas();
   ?>
 
- <script language="JavaScript" type="text/javascript" src="./view/js/ajxmarca.js"></script>
- <script language="JavaScript" type="text/javascript" src="./view/js/addparent.js"></script>
+ <script language="JavaScript" type="text/javascript" src="./view/w3c/js/ajxmarca.js"></script>
+ <script language="JavaScript" type="text/javascript" src="./view/w3c/js/addparent.js"></script>
  
- <!--script language="JavaScript" type="text/javascript" src="./view/js/jquery.js"></script-->
+ <!--script language="JavaScript" type="text/javascript" src="./view/w3c/js/jquery.js"></script-->
 <link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="./view/js/jquery.min.js"></script>
-<script type="text/javascript" src="./view/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 
- <script language="JavaScript" type="text/javascript" src="./view/js/ferramentas.js"></script>
- <script language="JavaScript" type="text/javascript" src="./view/js/segue.js"></script>
- <script src="./view/js/jquery.easing.1.3.js" type="text/javascript"></script>
- <script src="./view/js/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
+ <script language="JavaScript" type="text/javascript" src="./view/w3c/js/ferramentas.js"></script>
+ <script language="JavaScript" type="text/javascript" src="./view/w3c/js/segue.js"></script>
+ <script src="./view/w3c/js/jquery.easing.1.3.js" type="text/javascript"></script>
+ <script src="./view/w3c/js/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
  <link rel="stylesheet" href="./view/w3c/css/sexylightbox.css" type="text/css" media="all" />
  
  <script language="JavaScript" type="text/javascript">
