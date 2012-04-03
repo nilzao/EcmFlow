@@ -1,5 +1,4 @@
 <?php
-
 class knl_domain_Index {
     private static $instance;
 
@@ -9,15 +8,13 @@ class knl_domain_Index {
             self::$instance = new self();
         }
         return self::$instance;
-    }
+	}
 
-  public function handle(){
-  	    $vl = knl_view_Loader::getInstance();
-        $menu = knl_lib_perm_Menu::getInstance()->montaMenu();
-        $vl->setVar("menu",$menu);
-        $vl->setVar("menu",$vl->display("menu",false));
-        $vl->display("index");
-  }
+	public function handle(){
+		$vl = knl_view_Loader::getInstance();
+		$menu = knl_lib_perm_Menu::getInstance()->montaMenu();
+		$vl->setVar("menu",$menu);
+		$vl->display("index");
+	}
 
 }
-?>

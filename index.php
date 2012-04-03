@@ -20,4 +20,3 @@ require_once("adodb.inc.php");
 header( 'Content-type: text/html; charset=utf-8' );
 $shell = (isset($argv)) ? $argv : array();
 knl_controller_FrontController::dispatch($shell);
-?>

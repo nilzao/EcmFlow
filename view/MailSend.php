@@ -1,4 +1,0 @@
-<?php
-
-?>
-e-mail enviado...
