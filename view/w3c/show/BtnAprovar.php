@@ -1,0 +1,7 @@
+<?php
+$documento = $knl_helper->getVar("doc");
+//echo "<a href=\"index.php?domain=Doc&action=DocAprova&id={$documento->get_id()}\"><img src=\"./img/icones/botaprov.jpg\" alt=\"Aprovar\" title=\"Aprovar\" border=\"0\"></a><img src=\"./img/docshow/entrebotoes.jpg\">";
+//echo "<a href=\"index.php?domain=Doc&action=DocReprova&id={$documento->get_id()}\"><img src=\"./img/icones/botdesaprov.jpg\" alt=\"Reprovar\" title=\"Reprovar\" border=\"0\"></a><img src=\"./img/docshow/entrebotoes.jpg\">"; 
+echo "<a href=\"#TB_inline?inlineId=authDiv&height=220&width=330\" rel=\"sexylightbox\" title=\"Autenticação para Aprovar\"><img onclick=\"document.getElementById('authIframe').src='index.php?domain=Doc&action=DocAuthAprova&tpApr=aprovar&id={$documento->get_id()}';\" src=\"./img/icones/botaprov.jpg\" alt=\"Aprovar\" title=\"Aprovar\" border=\"0\"></a><img src=\"./img/docshow/entrebotoes.jpg\">";
+echo "<a href=\"#TB_inline?inlineId=authDiv&height=220&width=330\" rel=\"sexylightbox\" title=\"Autenticação para Reprovar\"><img onclick=\"document.getElementById('authIframe').src='index.php?domain=Doc&action=DocAuthAprova&tpApr=reprovar&id={$documento->get_id()}';\" src=\"./img/icones/botdesaprov.jpg\" alt=\"Reprovar\" title=\"Reprovar\" border=\"0\"></a><img src=\"./img/docshow/entrebotoes.jpg\">";
+?><div id="authDiv" style="display:none;"><iframe id="authIframe" style="width:320px;height: 210px" scrolling="no"></iframe></div>
