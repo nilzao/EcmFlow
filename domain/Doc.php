@@ -514,7 +514,7 @@ class knl_domain_Doc {
 
 	foreach($silabas as $v=>$c){
 		$total_tmp = $total_tmp + $valores[$c] ;
-		$silaba_str .= '<img src="./img/iconespasswd/'.$c.'" border="0">';
+		$silaba_str .= '<img src="./view/w3c/img/iconespasswd/'.$c.'" border="0">';
 	
 		if (($v+1)%3 == 0){
 			
