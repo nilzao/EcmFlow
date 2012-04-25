@@ -9,6 +9,7 @@ echo $helperLista->js_ListaJs();
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
 </head>
 <body bgcolor="FFFFFF">
+<pre><?php include('menu.php'); ?></pre>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 

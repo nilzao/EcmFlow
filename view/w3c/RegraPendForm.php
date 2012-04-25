@@ -4,6 +4,7 @@
     <title></title>
 </head>
 <body bgcolor="FFFFFF">
+<pre><?php include('menu.php'); ?></pre>
 <?php
 $listapendtipo = $knl_helper->getVar("pendtipo");
 $listagrupos = $knl_helper->getVar("grupos");

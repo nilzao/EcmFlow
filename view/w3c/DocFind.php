@@ -30,6 +30,7 @@ if($knl_helper->isSetVar("head")){
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 </head>
  <body bgcolor="#FFFFFF">
+ <pre><?php include('menu.php'); ?></pre>
   <h1>Documento</h1>
   <form action="index.php">
   <input type="hidden" name="domain" value="Doc"/>
