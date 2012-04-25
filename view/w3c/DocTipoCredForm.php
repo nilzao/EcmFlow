@@ -4,6 +4,7 @@
     <title></title>
 </head>
 <body bgcolor="FFFFFF">
+<pre><?php include('menu.php'); ?></pre>
 <?php
 $listadoctipo = $knl_helper->getVar("doctipo");
 $listagrupos = $knl_helper->getVar("grupos");

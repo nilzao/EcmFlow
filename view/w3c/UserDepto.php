@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
 </head>
 <body bgcolor="FFFFFF">
+<pre><?php include('menu.php'); ?></pre>
 <?php
 $listadeptos = $knl_helper->getVar("deptos");
 $usuario = $knl_helper->getVar("usuario");

@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
 </head>
  <body bgcolor="FFFFFF">
+ <pre><?php include('menu.php'); ?></pre>
 <?php
 $lista = $knl_helper->getVar("lista");
 $empresa_ativa = $knl_helper->getVar("empresa_ativa");
