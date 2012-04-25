@@ -7,15 +7,17 @@ $helperForm = knl_view_w3c_hlp_FormFind::getInstance();
  <head>
   <title>Pendências - ECMFLOW = Ecm + Workflow + Ged</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <?php
+<?php
 echo $helperForm->js_FormsSpec();
 ?>
- </head>
- <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-No Frames!
- <pre><?php include('menu.php'); ?></pre>
- 
-
+<link rel="stylesheet" href="./view/w3c/css/menu.css" type="text/css">
+<script type="text/javascript" src="./view/w3c/js/main_menu.js"></script>
+<link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<?php include('menu.php'); ?>
 <h1>Pendencias</h1>
   <form action="index.php">
   <input type="hidden" name="domain" value="Doc"/>

@@ -6,9 +6,15 @@ $helperLista = knl_view_w3c_hlp_Lista::getInstance();
 $helperLista->monta_ListaJs();
 echo $helperLista->js_ListaJs();
 ?>
-<link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
+<link rel="stylesheet" href="./view/w3c/css/lista.css" type="text/css">
+<link rel="stylesheet" href="./view/w3c/css/menu.css" type="text/css">
+<script type="text/javascript" src="./view/w3c/js/main_menu.js"></script>
+<link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
  </head>
  <body bgcolor="FFFFFF">
+<?php include('menu.php'); ?>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 
