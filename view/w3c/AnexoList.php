@@ -7,7 +7,7 @@ $helperLista->monta_ListaJs();
 $pag = $knl_helper->getVar("pag");
 echo $helperLista->js_ListaJs();
 ?>
-<script type="text/javascript" language="JavaScript">
+<script type="text/javascript">
 var img_obj=null;
 <?php
 $lista = $knl_helper->getVar("lista");

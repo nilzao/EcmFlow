@@ -335,8 +335,14 @@ function load_div(html){
 <div id="doc_show">
  <div id="div_fix">
   <div class="divbox" id="divbox"><iframe class="iframebox" id="iframebox"></iframe>
-  <table width="100%" border="0" id="tb_close"><tr><td align="right"><a style="background-color:#000000;color:#FFFFFF;" onclick="iframeClose();"><strong>Fechar</strong></a></td></tr></table>
-   </div>
+				<table width="100%" border="0" id="tb_close">
+					<tr>
+						<td align="right"><a
+							style="background-color: #000000; color: #FFFFFF;"
+							onclick="iframeClose();"><strong>Fechar</strong> </a></td>
+					</tr>
+				</table>
+			</div>
  </div><div id="div_ferramentas"><input type="button" onclick="get_canetas();add_caneta();" value="Add">
  <br><input type="button" onclick="get_canetas();" value="Show"><br>
  <input type="button" onclick="toggle_regua();" value="Régua"><br><br>
@@ -365,7 +371,7 @@ echo $helperShowPag->html_Paginas();
 </div>
 </div>
 </div>
-<center>
+<div align="center">
 <div id="doc_img_div" style="position:relative;width:1000px">
 <div id="regua" class="regua"></div>
    <img id="doc_img" style="position:relative;z-index:0;" src="img/doc/<?php echo "{$documento->get_id()}_{$pag}"; ?>.jpg" />
@@ -373,6 +379,6 @@ echo $helperShowPag->html_Paginas();
 
 <div id="caneta" class="caneta"></div>
 <div id="div_insert" style="position:absolute;top:0px;left:0px;"></div>
-</center>
+</div>
  </body>
 </html>
