@@ -20,17 +20,22 @@ class knl_domain_DocTipoCred {
   }
 
   public function lst(){
-  	  echo "<a href=\"index.php?domain=DocTpCred&action=formadd\">Adicionar</a><br>";
       $dDocTpCred = knl_dao_doc_tipo_cred::getInstance();
       $lstDocTpCred = $dDocTpCred->selectAll();
       $dGrupo = knl_dao_knl_grupo::getInstance();
       $dDocTipo = knl_dao_doc_tipo::getInstance();
+      $arrayDesc = array();
+      $i = 0;
       foreach($lstDocTpCred as $v){
       	$mDocTipo = $dDocTipo->selectById($v->get_id_doc_tipo());
-      	echo "docTipo: ".$mDocTipo->get_descricao()." / ";
+      	$arrayDesc[$i] = "docTipo: ".$mDocTipo->get_descricao()." / ";
       	$mGrupo = $dGrupo->selectById($v->get_id_knl_grupo());
-      	echo "grupo: ".$mGrupo->get_nome()."<br>";
+      	$arrayDesc[$i] .= "grupo: ".$mGrupo->get_nome()."<br>";
+      	$i++;
       }
+      $vl = knl_view_Loader::getInstance();
+      $vl->setVar("lista",$arrayDesc);
+      $vl->display("DocTipoCredList");
   }
   
   public function formadd(){
