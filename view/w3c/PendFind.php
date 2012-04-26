@@ -17,8 +17,8 @@ echo $helperForm->js_FormsSpec();
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 </head>
 <body>
-<?php include('menu.php'); ?>
-<h1>Pendencias</h1>
+<?php include('./view/w3c/menu.php'); ?>
+<h1>Pendências</h1>
   <form action="index.php">
   <input type="hidden" name="domain" value="Doc"/>
   <input type="hidden" name="action" value="PendenciaList"/>

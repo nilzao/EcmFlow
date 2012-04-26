@@ -7,8 +7,14 @@ $helperLista->monta_ListaJs();
 echo $helperLista->js_ListaJs();
 ?>
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
+<link rel="stylesheet" href="./view/w3c/css/menu.css" type="text/css">
+<script type="text/javascript" src="./view/w3c/js/main_menu.js"></script>
+<link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
+<script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
  </head>
- <body bgcolor="FFFFFF">
+ <body>
+<?php include('./view/w3c/menu.php'); ?>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 $lista = $knl_helper->getVar("lista");

@@ -14,7 +14,7 @@ echo $helperLista->js_ListaJs();
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 </head>
 <body>
-<?php include('menu.php'); ?>
+<?php include('./view/w3c/menu.php'); ?>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 

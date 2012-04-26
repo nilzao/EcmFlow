@@ -193,9 +193,8 @@ function load_div(html){
 	#doc {
 	position:relative;
 	font-size: 16px;
-	font-family: Arial;
+	font-family: serif;
 	font-style: normal;
-	font-weight: lighter;
 	color: #FFFFFF;
 	height:43px;
 	padding:0px;
@@ -279,7 +278,7 @@ function load_div(html){
 	#doc_msg {
 	position:absolute;
 	font-size: 12px;
-	font-family: Arial;
+	font-family: serif;
 	font-style: italic;
 	font-weight: lighter;
 	color: #FFFFFF;

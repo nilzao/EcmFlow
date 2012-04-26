@@ -10,7 +10,7 @@
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 </head>
 <body>
-<?php include('menu.php'); ?>
+<?php include('./view/w3c/menu.php'); ?>
 <?php
 $listausuarios = $knl_helper->getVar("users");
 ?>

@@ -9,7 +9,7 @@
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 </head>
  <body>
-<?php include('menu.php'); ?>
+<?php include('./view/w3c/menu.php'); ?>
 <?php
 $lista = $knl_helper->getVar("lista");
 $empresa_ativa = $knl_helper->getVar("empresa_ativa");
