@@ -23,7 +23,7 @@ if($knl_helper->isSetVar("head")){
 ?>
 <link rel="stylesheet" href="view/w3c/css/formedit.css" type="text/css">
 </head>
-<body bgcolor="#FFFFFF">
+<body>
 <form action="index.php?domain=Doc&action=DocEdit" method="POST">
 <table border="0" class="tb_form" cellspacing="0">
 <?php

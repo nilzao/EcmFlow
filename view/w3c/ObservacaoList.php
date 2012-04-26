@@ -6,7 +6,7 @@ $lista = $knl_helper->getVar("lista");
 $id_doc = $knl_helper->getVar("id_doc");
 $pag = $knl_helper->getVar("pag");
 ?>
-<script type="text/javascript" language="JavaScript">
+<script type="text/javascript">
 <?php
 
 foreach($lista as $obs) {
@@ -34,7 +34,7 @@ foreach($lista as $obs) {
 ?>
 </script>
  </head>
- <body bgcolor="FFFFFF">
+ <body>
 
 <h3>Observacoes</h3>
 <a href="index.php?domain=Doc&action=ObsAddForm&id=<?php echo $id_doc; ?>">Adicionar</a><hr>

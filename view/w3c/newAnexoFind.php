@@ -19,7 +19,7 @@ echo $helperForm->js_FormsSpec();
   </title>
 <link rel="stylesheet" href="view/w3c/css/formfind.css" type="text/css">
  </head>
- <body bgcolor="#FFFFFF">
+ <body>
   <h1>Anexar Documento</h1>
   <form action="index.php">
   <input type="hidden" name="domain" value="Doc"/>

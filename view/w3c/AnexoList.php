@@ -50,7 +50,7 @@ foreach($lista as $doc) {
 </script>
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
  </head>
- <body bgcolor="FFFFFF" style="margin-top:0px;margin-bottom:0px;">
+ <body>
 <?php
 //$helperPag = knl_view_w3c_hlp_Paginacao::getInstance();
 $helperAnexoTop = knl_view_w3c_hlp_AnexoTop::getInstance();

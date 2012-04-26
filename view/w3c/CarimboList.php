@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  </head>
- <body bgcolor="FFFFFF">
+ <body>
   <h1>Carimbos</h1>
 <?php
 $lista = $knl_helper->getVar("lista");

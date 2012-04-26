@@ -8,7 +8,7 @@
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
  </head>
- <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+ <body>
 <?php include('menu.php'); ?>
 <p><a href="index.php?domain=DocTpCred&action=formadd">Adicionar</a></p>
 <?php

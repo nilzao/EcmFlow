@@ -16,7 +16,7 @@ echo $helperForm->js_FormsSpec();
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body>
 <?php include('menu.php'); ?>
 <h1>Pendencias</h1>
   <form action="index.php">

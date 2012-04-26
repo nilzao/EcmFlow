@@ -20,7 +20,6 @@
  $htmldiv ="</div>\n\n";
  $helperShowDiv->set_html_Div($htmldiv);
  
- //$vars['doc_pag;Paginas:'] = $documento->get_pag();
  $helperShowPag->monta_Paginas($documento->get_id(),$documento->get_pag(),$pag);
    
  $helperShowCab->monta_Cabecalho($cabecalho);
@@ -40,21 +39,21 @@
     echo $helperShowPag->css_Paginas();
   ?>
 
- <script language="JavaScript" type="text/javascript" src="./view/w3c/js/ajxmarca.js"></script>
- <script language="JavaScript" type="text/javascript" src="./view/w3c/js/addparent.js"></script>
+ <script type="text/javascript" src="./view/w3c/js/ajxmarca.js"></script>
+ <script type="text/javascript" src="./view/w3c/js/addparent.js"></script>
  
  <!--script language="JavaScript" type="text/javascript" src="./view/w3c/js/jquery.js"></script-->
 <link href="./view/w3c/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
 
- <script language="JavaScript" type="text/javascript" src="./view/w3c/js/ferramentas.js"></script>
- <script language="JavaScript" type="text/javascript" src="./view/w3c/js/segue.js"></script>
+ <script type="text/javascript" src="./view/w3c/js/ferramentas.js"></script>
+ <script type="text/javascript" src="./view/w3c/js/segue.js"></script>
  <script src="./view/w3c/js/jquery.easing.1.3.js" type="text/javascript"></script>
  <script src="./view/w3c/js/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
  <link rel="stylesheet" href="./view/w3c/css/sexylightbox.css" type="text/css" media="all" />
  
- <script language="JavaScript" type="text/javascript">
+ <script type="text/javascript">
 var _pag_js = <?php echo $pag ; ?>;
 var _id_doc_js = <?php echo $documento->get_id(); ?>;
  
@@ -73,7 +72,7 @@ var _id_doc_js = <?php echo $documento->get_id(); ?>;
  	return false;
  }
  </script>
- <script language="JavaScript" type="text/javascript">
+ <script type="text/javascript">
 
 var LastPosY = 0;
 

@@ -8,7 +8,7 @@ echo $helperLista->js_ListaJs();
 ?>
 <link rel="stylesheet" href="view/w3c/css/lista.css" type="text/css">
  </head>
- <body bgcolor="FFFFFF">
+ <body>
   <h1>Anexar documento</h1>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();

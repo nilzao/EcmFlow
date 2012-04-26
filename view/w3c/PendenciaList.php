@@ -13,7 +13,7 @@ echo $helperLista->js_ListaJs();
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 <script type="text/javascript" src="./view/w3c/js/jquery-ui.min.js"></script>
  </head>
- <body bgcolor="FFFFFF">
+ <body>
 <?php include('menu.php'); ?>
 <?php
 $helperPag = knl_view_w3c_hlp_Paginacao::getInstance();

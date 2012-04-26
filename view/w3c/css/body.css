@@ -1,11 +1,7 @@
 @CHARSET "UTF-8";
 
-td {
+body {
 	font-size:13px;
-	font-family: Arial;
-}
-
-h1 {
-	font-size:16px;
+	font-family:Arial;
 	color: #000000;
 }

@@ -33,7 +33,7 @@ if($knl_helper->isSetVar("head")){
 <link rel="stylesheet" href="view/w3c/css/formfind.css" type="text/css">
 <script type="text/javascript" src="./view/w3c/js/jquery.min.js"></script>
 </head>
- <body bgcolor="#FFFFFF">
+ <body>
 <?php include('menu.php'); ?>
   <h1>Documento</h1>
   <form action="index.php">
