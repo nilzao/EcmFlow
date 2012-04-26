@@ -1,5 +1,22 @@
 @CHARSET "UTF-8";
 #main_menu {
+	position: absolute;
+	border: solid 1px;
+	width: 240px;
+	display: none;
+	background-color: white;
+}
+
+.main_menu_ul {
 	color: black;
 	font-weight: bolder;
+	font-size: 13px;
+	font-family: serif;
+}
+
+#toggle_main_menu {
+	border: solid 1px;
+	cursor: pointer;
+	font-size: 13px;
+	width: 40px;
 }

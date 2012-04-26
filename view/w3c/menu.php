@@ -1,4 +1,4 @@
-<a onclick="toggleMainMenu();">Menu</a>
+<div id="toggle_main_menu" onclick="toggleMainMenu();">Menu</div>
 <div id="main_menu">
 <ul class="main_menu_ul">
 <?php
