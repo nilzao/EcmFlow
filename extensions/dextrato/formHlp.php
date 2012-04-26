@@ -1,5 +1,5 @@
 <?php
-class knl_extensions_dextrato_formHlp extends knl_view_hlp_FormEdit{
+class knl_extensions_dextrato_formHlp extends knl_view_w3c_hlp_FormEdit{
 	private static $instance;
 	private $ExtratoBancoCombo;
 	private $ExtratoAgenciaCombo;

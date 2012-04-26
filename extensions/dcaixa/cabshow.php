@@ -1,6 +1,6 @@
 <?php
 $caixa = $knl_helper->getVar('cabecalho');
-$helperShowDiv = knl_view_hlp_ShowDiv::getInstance();
+$helperShowDiv = knl_view_w3c_hlp_ShowDiv::getInstance();
 
 
 $htmldiv = "<div id=\"docH\">";

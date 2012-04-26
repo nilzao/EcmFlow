@@ -20,16 +20,16 @@ class knl_extensions_dnfservprest_criteria extends knl_lib_daoext_Convert {
 	public function montaSql($arrayFiltro){
 		$this->arrayFiltroOut = $arrayFiltro;
 		$this->sql = "";
-		$this->innerJoin .= " LEFT JOIN d_nf_servprest ON (tb.id = d_nf_servprest.id_doc) ";
-	    $this->innerJoin .= " LEFT JOIN d_cad_nf d_nf_fornecedor ON (d_nf_fornecedor.id = d_nf_servprest.id_fornecedor) ";
-	    $this->orderBy = array("d_nf_servprest.datasai","d_nf_fornecedor.razao","tb.numero");
+		$this->innerJoin .= " LEFT JOIN d_nf_serv_prest ON (tb.id = d_nf_serv_prest.id_doc) ";
+	    $this->innerJoin .= " LEFT JOIN d_cad_nf d_nf_fornecedor ON (d_nf_fornecedor.id = d_nf_serv_prest.id_fornecedor) ";
+	    $this->orderBy = array("d_nf_serv_prest.datasai","d_nf_fornecedor.razao","tb.numero");
 	    if (!empty($arrayFiltro['data2'])){
-	  	   $this->sql .= " AND d_nf_servprest.datasai <= ? ";
+	  	   $this->sql .= " AND d_nf_serv_prest.datasai <= ? ";
 	  	   $this->ArrayBind[] = $arrayFiltro['data2'];
 	  	   $this->arrayFiltroOut['data2'] = $this->data_mysql_to_br($this->arrayFiltroOut['data2'],"-");
 	    }
 	    if (!empty($arrayFiltro['data1'])){
-	  	   $this->sql .= " AND d_nf_servprest.datasai >= ? ";
+	  	   $this->sql .= " AND d_nf_serv_prest.datasai >= ? ";
 	  	   $this->ArrayBind[] = $arrayFiltro['data1'];
 	  	   $this->arrayFiltroOut['data1'] = $this->data_mysql_to_br($this->arrayFiltroOut['data1'],"-");
 	    }

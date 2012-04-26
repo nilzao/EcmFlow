@@ -17,4 +17,3 @@ class knl_lib_perm_Menu {
         return $menu;
   }
 }
-?>

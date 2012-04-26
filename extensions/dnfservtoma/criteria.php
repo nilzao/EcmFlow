@@ -20,7 +20,7 @@ class knl_extensions_dnfservtoma_criteria extends knl_lib_daoext_Convert {
 	public function montaSql($arrayFiltro){
 		$this->arrayFiltroOut = $arrayFiltro;
 		$this->sql = "";
-		$this->innerJoin .= " LEFT JOIN d_nf_servtoma nfst ON (tb.id = nfst.id_doc) ";
+		$this->innerJoin .= " LEFT JOIN d_nf_serv_toma nfst ON (tb.id = nfst.id_doc) ";
 	    $this->innerJoin .= " LEFT JOIN d_cad_nf nfstforn ON (nfstforn.id = nfst.id_fornecedor) ";
 	    $this->orderBy = array("nfst.dataent","nfstforn.razao","tb.numero");
 	    if (!empty($arrayFiltro['data2'])){

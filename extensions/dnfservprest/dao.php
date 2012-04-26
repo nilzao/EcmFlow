@@ -4,11 +4,11 @@ class knl_extensions_dnfservprest_dao extends knl_extensions_cadastronf_CadParen
     private static $instance;
     
     private $SELECT_BY_ID = "SELECT id,id_doc,id_fornecedor,datasai
-                             FROM d_nf_servprest
+                             FROM d_nf_serv_prest
                              WHERE id = ?";
 
     private $SELECT_BY_CRITERIA = "SELECT id,id_doc,id_fornecedor,datasai
-                             FROM d_nf_servprest
+                             FROM d_nf_serv_prest
                              WHERE 1 = 1 ";
 
     private function __construct() {
@@ -28,7 +28,7 @@ class knl_extensions_dnfservprest_dao extends knl_extensions_cadastronf_CadParen
        if($l = $stmt->FetchRow()) {
           $objmodel = new knl_extensions_dnfservprest_model($l['id'],$l['id_doc'],$l['id_fornecedor'],$l['datasai']);
        } else {
-            throw new Exception("Nenhum d_nf_servprest foi encontrado!");
+            throw new Exception("Nenhum d_nf_serv_prest foi encontrado!");
          }
        return $objmodel;
     }
@@ -41,7 +41,7 @@ class knl_extensions_dnfservprest_dao extends knl_extensions_cadastronf_CadParen
        if($l = $stmt->FetchRow()) {
           $objmodel = new knl_extensions_dnfservprest_model($l['id'],$l['id_doc'],$l['id_fornecedor'],$l['datasai']);
        } else {
-            throw new Exception("Nenhum d_nf_servprest foi encontrado!");
+            throw new Exception("Nenhum d_nf_serv_prest foi encontrado!");
          }
        return $objmodel;
     }
@@ -52,13 +52,13 @@ class knl_extensions_dnfservprest_dao extends knl_extensions_cadastronf_CadParen
 
     public function upsert(knl_extensions_dnfservprest_model $objmodel){
        if ($objmodel->get_id() == 0){
-          $query = "INSERT INTO d_nf_servprest (id_doc,id_fornecedor,datasai)
+          $query = "INSERT INTO d_nf_serv_prest (id_doc,id_fornecedor,datasai)
                     VALUES ('".$objmodel->get_id_doc()."','".$objmodel->get_id_fornecedor()."','".$objmodel->get_datasai_db()."')";
           $stmt = $this->conn->prepare($query);
           $stmt = $this->conn->execute($stmt);
           $objmodel->set_id($this->conn->Insert_ID());
        } else {
-            $query = "UPDATE d_nf_servprest SET 
+            $query = "UPDATE d_nf_serv_prest SET 
                       id_doc='{$objmodel->get_id_doc()}',id_fornecedor='{$objmodel->get_id_fornecedor()}',datasai='{$objmodel->get_datasai_db()}'
                       WHERE id = ?";
             $stmt = $this->conn->prepare($query);

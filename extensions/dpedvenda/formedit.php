@@ -1,5 +1,5 @@
 <?php
-$helperFormEdit = knl_view_hlp_FormEdit::getInstance();
+$helperFormEdit = knl_view_w3c_hlp_FormEdit::getInstance();
 $pedvenda = $knl_helper->getVar('cabecalho');
 $fornecedor = $pedvenda['dpedvendaFull']['forn'];
 $knl_helper->setVar("head","<script type=\"text/javascript\" src=\"./extensions/cadastronf/cadcnpj.js\"></script>\n");

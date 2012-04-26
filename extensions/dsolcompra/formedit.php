@@ -1,5 +1,5 @@
 <?php
-$helperFormEdit = knl_view_hlp_FormEdit::getInstance();
+$helperFormEdit = knl_view_w3c_hlp_FormEdit::getInstance();
 $dsolcompra = $knl_helper->getVar('cabecalho');
 /*
 //EXEMPLOS:

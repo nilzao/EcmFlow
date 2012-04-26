@@ -1,5 +1,4 @@
 <?php
-
 class knl_domain_Acesso {
 	private static $instance;
 
@@ -31,7 +30,6 @@ class knl_domain_Acesso {
   public function formLogin(){
   	$vh = knl_view_Loader::getInstance();
   	$vh->display("formlogin");
-  	//echo "aqui vai a chamada de viewLoad do form";
   }
 
   public function login(){
@@ -62,4 +60,3 @@ class knl_domain_Acesso {
   	$session->set_grupos(array());
   }
 }
-?>
