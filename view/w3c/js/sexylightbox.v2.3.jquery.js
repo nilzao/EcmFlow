@@ -533,7 +533,11 @@ jQuery.bind = function(object, method){
                 url: url,
                 type: "GET",
                 cache: false,
-                error: $.bind(this, function(){this.show('', this.options.imagesdir+'/'+this.options.color+'/404html.png', this.options.find)}),
+				error : $.bind(this, function() {
+					this.show('', this.options.imagesdir + '/'
+					+ this.options.color + '/404html.png',
+					this.options.find);
+				}),
                 success: $.bind(this, this.handlerFunc)
               });
             }));
@@ -742,6 +746,7 @@ jQuery.bind = function(object, method){
       var d=this.options.shake.distance;
       var l=this.Wrapper.position();
       l=l.left;
+      var x;
       for(x=0;x<this.options.shake.loops;x++) {
        this.Wrapper.animate({left: l+d}, this.options.shake.duration, this.options.shake.transition)
        .animate({left: l-d}, this.options.shake.duration, this.options.shake.transition);
@@ -750,5 +755,5 @@ jQuery.bind = function(object, method){
        .animate({"left": l}, this.options.shake.duration, this.options.shake.transition);
     }
     
-  }
+  };
 })(jQuery);

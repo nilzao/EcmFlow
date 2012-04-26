@@ -13,6 +13,7 @@ function getURLVar(urlVarName) {
 		//load all the name/value pairs into an array
 		var urlVars = urlHalves[1].split('&');
 		//loop over the list, and find the specified url variable
+		var i;
 		for(i=0; i<=(urlVars.length); i++){
 			if(urlVars[i]){
 				//load the name/value pair into an array

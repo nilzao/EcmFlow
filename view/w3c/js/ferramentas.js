@@ -1,5 +1,4 @@
 function show_ferramentas(id_doc,pag){
-	//$("#div_ferramentas").show();
 	$("#div_ferramentas").toggle();
 }
 
@@ -88,7 +87,7 @@ function del_caneta(obj){
 }
 
 function show_caneta(xml){
-	var i_caneta;
+	var i_caneta='';
 	$(xml).find('marca_texto').each(function(){
 		i_caneta = $(this).text();
 	});
