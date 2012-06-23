@@ -21,16 +21,21 @@ class knl_domain_Deptos {
 
   public function lst(){
       $Deptos = knl_dao_knl_depto::getInstance();
-      $arrayx = $Deptos->selectAll();
+      $lstDpto = $Deptos->selectAll();
       //print_r($arrayx);
-      $GruposPerm = knl_dao_knl_grupo::getInstance();
-      foreach($arrayx as $v){
-         $arrGrupos = $GruposPerm->selectByIdDepto($v->get_Id());
-         foreach($arrGrupos as $vg){
-             echo $vg->get_nome().": ".$vg->get_id_knl_perm_bin()."<br>";
-         }
-      }
-
+      $vl = knl_view_Loader::getInstance();
+      $vl->setVar("deptos",$lstDpto);
+      $vl->display("DeptoList");
+  }
+  
+  public function formadd(){
+	  $vl = knl_view_Loader::getInstance();
+      //$vl->setVar("deptos",$lstDpto);
+      $vl->display("DeptoForm");
+  }
+  
+  public function add(){
+  	  //implementar gravação
+  	  echo "gravando no banco";
   }
 }
-?>
